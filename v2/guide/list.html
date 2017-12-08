@@ -1007,7 +1007,7 @@ new Vue({
 <p>Você poderia adicionar uma nova propriedade <code>age</code> ao objeto interno <code>userProfile</code> com:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.set(vm.userProfile, <span class="string">'age'</span>, <span class="number">30</span>)</span><br></pre></td></tr></table></figure>
 <p>Também é possível usar o método de instância <code>vm.$set</code>, um atalho para o global <code>Vue.set</code>:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.$set(<span class="keyword">this</span>.userProfile, <span class="string">'age'</span>, <span class="number">30</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.$set(<span class="keyword">this</span>.userProfile, <span class="string">'age'</span>, <span class="number">27</span>)</span><br></pre></td></tr></table></figure>
 <p>Às vezes, você pode querer adicionar várias novas propriedades a um objeto existente, utilizando por exemplo <code>Object.assign()</code> ou <code>_.extend()</code>. Nestes casos, você pode criar um objeto novo com propriedades mescladas de ambos os objetos. Então, ao invés de:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Object</span>.assign(<span class="keyword">this</span>.userProfile, &#123;</span><br><span class="line">  age: <span class="number">30</span>,</span><br><span class="line">  favoriteColor: <span class="string">'Verde Vue'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>Você poderia adicionar novas propriedades reativas com:</p>
