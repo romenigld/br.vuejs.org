@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Interligações em Classes e Estilos — Vue.js</title>
+    <title>Interligações de Classe e Estilo — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Vue.js - O Framework JavaScript Progressivo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -17,12 +17,12 @@
     <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/class-and-style.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Interligações em Classes e Estilos — Vue.js">
+    <meta property="og:title" content="Interligações de Classe e Estilo — Vue.js">
     <meta property="og:description" content="Vue.js - O Framework JavaScript Progressivo">
     <meta property="og:image" content="https://br.vuejs.org//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Interligações em Classes e Estilos — Vue.js">
+    <meta name="twitter:title" content="Interligações de Classe e Estilo — Vue.js">
     <meta name="twitter:description" content="Vue.js - O Framework JavaScript Progressivo">
     <meta name="twitter:image" content="https://br.vuejs.org/images/logo.png">
 
@@ -70,6 +70,9 @@
       ga('create', 'UA-46852172-1', 'br.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
   <body class="docs">
     <div id="mobile-bar" >
@@ -144,9 +147,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -238,9 +241,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -263,16 +266,18 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Patrocínios Platina</span><br>
+        <span>Patrocínios Platina</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png" style="margin-top:-5px">
+          <img src="/images/tooltwist.png">
         </a>
-        <a href="https://www.infinitynewtab.com/donate/index.html" target="_blank" class="logo">
-          <img src="/images/infinitynewtab.png">
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
         </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Seja um Patrocinador
@@ -385,7 +390,7 @@
     
     
     <li>
-      <a href="/v2/guide/class-and-style.html" class="sidebar-link current">Interligações em Classes e Estilos</a>
+      <a href="/v2/guide/class-and-style.html" class="sidebar-link current">Interligações de Classe e Estilo</a>
     </li>
   
     
@@ -844,10 +849,10 @@
     
   
   
-    <h1>Interligações em Classes e Estilos</h1>
+    <h1>Interligações de Classe e Estilo</h1>
   
   <p>Uma necessidade comum de interligação de dados é manipular as classes dos elementos e seus estilos <em>inline</em>. Uma vez que ambos são atributos, podemos usar <code>v-bind</code> para lidar com eles: apenas precisamos calcular uma String final com nossas expressões. No entanto, mexer com concatenação é irritante e propenso a erros. Por esta razão, Vue fornece aprimoramentos especiais quando <code>v-bind</code> é usado com <code>class</code> e <code>style</code>. Além de Strings, as expressões também podem avaliar Objetos ou Arrays.</p>
-<h2 id="Vinculando-em-Classes-HTML"><a href="#Vinculando-em-Classes-HTML" class="headerlink" title="Vinculando em Classes HTML"></a>Vinculando em Classes HTML</h2><h3 id="Sintaxe-do-Objeto"><a href="#Sintaxe-do-Objeto" class="headerlink" title="Sintaxe do Objeto"></a>Sintaxe do Objeto</h3><p>Podemos passar um objeto para <code>v-bind:class</code> para alternar classes dinamicamente:</p>
+<h2 id="Interligando-Classes-HTML"><a href="#Interligando-Classes-HTML" class="headerlink" title="Interligando Classes HTML"></a>Interligando Classes HTML</h2><h3 id="Sintaxe-do-Objeto"><a href="#Sintaxe-do-Objeto" class="headerlink" title="Sintaxe do Objeto"></a>Sintaxe do Objeto</h3><p>Podemos passar um objeto para <code>v-bind:class</code> para alternar classes dinamicamente:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>A sintaxe acima significa que a presença da classe <code>active</code> será determinada pela <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Truthy" target="_blank" rel="noopener">veracidade</a> do valor do dado <code>isActive</code>.</p>
 <p>Você pode ter múltiplas classes alternadas por ter mais campos no objeto. Além disso, a diretiva <code>v-bind:class</code> também pode coexistir com um atributo de classe “normal”. Veja o exemplo:</p>
@@ -887,7 +892,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Quando <code>isActive</code> for verdadeiro, o HTML resultante será:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"foo bar active"</span>&gt;</span>Oi<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Vinculando-em-Estilos-Inline"><a href="#Vinculando-em-Estilos-Inline" class="headerlink" title="Vinculando em Estilos Inline"></a>Vinculando em Estilos Inline</h2><h3 id="Sintaxe-de-Objeto"><a href="#Sintaxe-de-Objeto" class="headerlink" title="Sintaxe de Objeto"></a>Sintaxe de Objeto</h3><p>A sintaxe de objeto para <code>v-bind:style</code> é bastante simples - parece quase CSS, mas em um objeto JavaScript. Você pode usar <em>camelCase</em> ou <em>kebab-case</em> para o nome da propriedade CSS.</p>
+<h2 id="Interligando-Estilos-Inline"><a href="#Interligando-Estilos-Inline" class="headerlink" title="Interligando Estilos Inline"></a>Interligando Estilos Inline</h2><h3 id="Sintaxe-de-Objeto"><a href="#Sintaxe-de-Objeto" class="headerlink" title="Sintaxe de Objeto"></a>Sintaxe de Objeto</h3><p>A sintaxe de objeto para <code>v-bind:style</code> é bastante simples - parece quase CSS, mas em um objeto JavaScript. Você pode usar <em>camelCase</em> ou <em>kebab-case</em> para o nome da propriedade CSS.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"&#123; color: activeColor, fontSize: fontSize + 'px' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  activeColor: <span class="string">'red'</span>,</span><br><span class="line">  fontSize: <span class="number">30</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Muitas vezes é uma boa ideia vincular um objeto diretamente no <em>template</em> para que fique mais limpo.</p>

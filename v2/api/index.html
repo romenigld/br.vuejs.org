@@ -70,6 +70,9 @@
       ga('create', 'UA-46852172-1', 'br.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
   <body class="docs">
     <div id="mobile-bar" >
@@ -144,9 +147,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -238,9 +241,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -263,16 +266,18 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Patrocínios Platina</span><br>
+        <span>Patrocínios Platina</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png" style="margin-top:-5px">
+          <img src="/images/tooltwist.png">
         </a>
-        <a href="https://www.infinitynewtab.com/donate/index.html" target="_blank" class="logo">
-          <img src="/images/infinitynewtab.png">
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
         </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Seja um Patrocinador
@@ -423,9 +428,7 @@
 <p>Defina <code>false</code> para previnir a exibição da dica sobre o modo de produção ao iniciar o Vue.</p>
 </li>
 </ul>
-<h2 id="Metodos-Globais"><a href="#Metodos-Globais" class="headerlink" title="Métodos Globais"></a>Métodos Globais</h2><h3 id="Vue-extend">Vue.extend( options )</h3>
-
-<ul>
+<h2 id="Metodos-Globais"><a href="#Metodos-Globais" class="headerlink" title="Métodos Globais"></a>Métodos Globais</h2><h3 id="Vue-extend-options"><a href="#Vue-extend-options" class="headerlink" title="Vue.extend( options )"></a>Vue.extend( options )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{Object} options</code></li>
@@ -442,9 +445,7 @@
 <li><p><strong>Ver também:</strong> <a href="../guide/components.html">Componentes</a></p>
 </li>
 </ul>
-<h3 id="Vue-nextTick">Vue.nextTick( [callback, context] )</h3>
-
-<ul>
+<h3 id="Vue-nextTick-callback-context"><a href="#Vue-nextTick-callback-context" class="headerlink" title="Vue.nextTick( [callback, context] )"></a>Vue.nextTick( [callback, context] )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{Function} [callback]</code></li>
@@ -461,9 +462,7 @@
 <li><p><strong>Ver também:</strong> <a href="../guide/reactivity.html#Async-Update-Queue">Fila de Atualização Assíncrona</a></p>
 </li>
 </ul>
-<h3 id="Vue-set">Vue.set( target, key, value )</h3>
-
-<ul>
+<h3 id="Vue-set-target-key-value"><a href="#Vue-set-target-key-value" class="headerlink" title="Vue.set( target, key, value )"></a>Vue.set( target, key, value )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{Object | Array} target</code></li>
@@ -480,9 +479,7 @@
 <li><p><strong>Ver também:</strong> <a href="../guide/reactivity.html">Reatividade em Profundidade</a></p>
 </li>
 </ul>
-<h3 id="Vue-delete">Vue.delete( target, key )</h3>
-
-<ul>
+<h3 id="Vue-delete-target-key"><a href="#Vue-delete-target-key" class="headerlink" title="Vue.delete( target, key )"></a>Vue.delete( target, key )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{Object | Array} target</code></li>
@@ -499,9 +496,7 @@
 <li><p><strong>Ver também:</strong> <a href="../guide/reactivity.html">Reatividade em Profundidade</a></p>
 </li>
 </ul>
-<h3 id="Vue-directive">Vue.directive( id, [definition] )</h3>
-
-<ul>
+<h3 id="Vue-directive-id-definition"><a href="#Vue-directive-id-definition" class="headerlink" title="Vue.directive( id, [definition] )"></a>Vue.directive( id, [definition] )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{string} id</code></li>
@@ -515,9 +510,7 @@
 <li><p><strong>Ver também:</strong> <a href="../guide/custom-directive.html">Diretivas Personalizadas</a></p>
 </li>
 </ul>
-<h3 id="Vue-filter">Vue.filter( id, [definition] )</h3>
-
-<ul>
+<h3 id="Vue-filter-id-definition"><a href="#Vue-filter-id-definition" class="headerlink" title="Vue.filter( id, [definition] )"></a>Vue.filter( id, [definition] )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{string} id</code></li>
@@ -529,9 +522,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// registra</span></span><br><span class="line">Vue.filter(<span class="string">'my-filter'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// retorna o valor processado</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// getter, retorna o filtro se registrado</span></span><br><span class="line"><span class="keyword">var</span> myFilter = Vue.filter(<span class="string">'my-filter'</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Vue-component">Vue.component( id, [definition] )</h3>
-
-<ul>
+<h3 id="Vue-component-id-definition"><a href="#Vue-component-id-definition" class="headerlink" title="Vue.component( id, [definition] )"></a>Vue.component( id, [definition] )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{string} id</code></li>
@@ -545,9 +536,7 @@
 <li><p><strong>Ver também:</strong> <a href="../guide/components.html">Componentes</a></p>
 </li>
 </ul>
-<h3 id="Vue-use">Vue.use( plugin )</h3>
-
-<ul>
+<h3 id="Vue-use-plugin"><a href="#Vue-use-plugin" class="headerlink" title="Vue.use( plugin )"></a>Vue.use( plugin )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{Object | Function} plugin</code></li>
@@ -560,9 +549,7 @@
 <li><p><strong>Ver também:</strong> <a href="../guide/plugins.html">Plugins</a></p>
 </li>
 </ul>
-<h3 id="Vue-mixin">Vue.mixin( mixin )</h3>
-
-<ul>
+<h3 id="Vue-mixin-mixin"><a href="#Vue-mixin-mixin" class="headerlink" title="Vue.mixin( mixin )"></a>Vue.mixin( mixin )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{Object} mixin</code></li>
@@ -574,9 +561,7 @@
 <li><p><strong>Ver também:</strong> <a href="../guide/mixins.html#Global-Mixin">Mixin Global</a></p>
 </li>
 </ul>
-<h3 id="Vue-compile">Vue.compile( template )</h3>
-
-<ul>
+<h3 id="Vue-compile-template"><a href="#Vue-compile-template" class="headerlink" title="Vue.compile( template )"></a>Vue.compile( template )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{string} template</code></li>
@@ -589,9 +574,7 @@
 <li><p><strong>Ver também:</strong> <a href="../guide/render-function.html">Funções de Renderização</a></p>
 </li>
 </ul>
-<h3 id="Vue-version">Vue.version</h3>
-
-<ul>
+<h3 id="Vue-version"><a href="#Vue-version" class="headerlink" title="Vue.version"></a>Vue.version</h3><ul>
 <li><p><strong>Detalhes</strong>: Disponibiliza a versão do Vue instalado como string. Isto é especialmente util para plugins e componentes da comunidade, onde você pode usar diferentes estratégias para diferentes versões.</p>
 </li>
 <li><p><strong>Uso:</strong></p>
@@ -671,13 +654,13 @@
 </li>
 </ul>
 <h3 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h3><ul>
-<li><p><strong>Tipo:</strong> <code>{ [key: string]: string | Function | Object }</code></p>
+<li><p><strong>Tipo:</strong> <code>{ [key: string]: string | Function | Object | Array}</code></p>
 </li>
 <li><p><strong>Detalhes:</strong></p>
-<p>Um objeto onde as chaves são expressões para observar e os valores são os callbacks correspondentes. O valor pode ser uma string do nome do método, ou um Objeto que contém opções adicionais. A instância Vue chamará <code>$watch()</code> para cada entrada no objeto na inicialização.</p>
+<p>Um objeto onde as chaves são expressões para observar e os valores são os <em>callbacks</em> correspondentes. O valor pode ser uma string do nome do método, ou um Objeto que contém opções adicionais. A instância Vue chamará <code>$watch()</code> para cada entrada no objeto na inicialização.</p>
 </li>
 <li><p><strong>Exemplo:</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span>,</span><br><span class="line">    b: <span class="number">2</span>,</span><br><span class="line">    c: <span class="number">3</span>,</span><br><span class="line">    d: <span class="number">4</span></span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    a: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'new: %s, old: %s'</span>, val, oldVal)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// nome do método como string</span></span><br><span class="line">    b: <span class="string">'someMethod'</span>,</span><br><span class="line">    <span class="comment">// observador profundo</span></span><br><span class="line">    c: &#123;</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">      deep: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// the callback will be called immediately after the start of the observation</span></span><br><span class="line">    d: &#123;</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">      immediate: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.a = <span class="number">2</span> <span class="comment">// =&gt; new: 2, old: 1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span>,</span><br><span class="line">    b: <span class="number">2</span>,</span><br><span class="line">    c: <span class="number">3</span>,</span><br><span class="line">    d: <span class="number">4</span>,</span><br><span class="line">    e: &#123;</span><br><span class="line">      f: &#123;</span><br><span class="line">        g: <span class="number">5</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    a: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'new: %s, old: %s'</span>, val, oldVal)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// nome do método como string</span></span><br><span class="line">    b: <span class="string">'someMethod'</span>,</span><br><span class="line">    <span class="comment">// observador profundo</span></span><br><span class="line">    c: &#123;</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">      deep: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// the callback will be called immediately after the start of the observation</span></span><br><span class="line">    d: &#123;</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">      immediate: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    e: [</span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">handle1</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">handle2</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">// watch vm.e.f's value: &#123;g: 5&#125;</span></span><br><span class="line">    <span class="string">'e.f'</span>: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.a = <span class="number">2</span> <span class="comment">// =&gt; new: 2, old: 1</span></span><br></pre></td></tr></table></figure>
 <p class="tip">Note que <strong>você não deve usar arrow function para definir um observador</strong> (e.g. <code>searchQuery: newValue =&gt; this.updateAutocomplete(newValue)</code>). A razão é que arrow functions fazem bind do contexto pai, então <code>this</code> não será a instância Vue como você está esperando e <code>this.updateAutocomplete</code> será undefined.</p>
 </li>
 <li><p><strong>Ver também:</strong> <a href="#vm-watch">Métodos da Instância / Data - vm.$watch</a></p>
@@ -762,7 +745,7 @@
 <li><p><strong>Tipo:</strong> <code>Function</code></p>
 </li>
 <li><p><strong>Detalhes:</strong></p>
-<p>Invocado sincronicamente após a instância ser criada. Neste ponto, a instância finalizou o processamento das opções, o que significa que  foi configurado:  observação de dados, propriedades computadas, metodos, watch/event callbacks. Entretanto, a fase de montagem não foi iniciada, e a propriedade <code>$el</code> não estará disponível ainda.</p>
+<p>Invocado sincronicamente após a instância ser criada. Neste ponto, a instância finalizou o processamento das opções, o que significa que  foi configurado:  observação de dados, propriedades computadas, metodos, watch/event <em>callbacks</em>. Entretanto, a fase de montagem não foi iniciada, e a propriedade <code>$el</code> não estará disponível ainda.</p>
 </li>
 <li><p><strong>Ver também:</strong> <a href="../guide/instance.html#Diagrama-do-Ciclo-de-Vida">Diagrama do Ciclo de Vida</a></p>
 </li>
@@ -1212,9 +1195,7 @@
 <p>Contém ouvintes de eventos (<em>event listeners</em>) advindos de <code>v-on</code> do escopo do componente pai. Esta propriedade pode ser para os componentes internos via <code>v-on=&quot;$listeners&quot;</code> - útil quando se quer criar componentes de ordem superior.</p>
 </li>
 </ul>
-<h2 id="Metodos-da-Instancia-Dados"><a href="#Metodos-da-Instancia-Dados" class="headerlink" title="Métodos da Instância / Dados"></a>Métodos da Instância / Dados</h2><h3 id="vm-watch">vm.$watch( expOrFn, callback, [options] )</h3>
-
-<ul>
+<h2 id="Metodos-da-Instancia-Dados"><a href="#Metodos-da-Instancia-Dados" class="headerlink" title="Métodos da Instância / Dados"></a>Métodos da Instância / Dados</h2><h3 id="vm-watch-expOrFn-callback-options"><a href="#vm-watch-expOrFn-callback-options" class="headerlink" title="vm.$watch( expOrFn, callback, [options] )"></a>vm.$watch( expOrFn, callback, [options] )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{string | Function} expOrFn</code></li>
@@ -1246,9 +1227,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.$watch(<span class="string">'a'</span>, callback, &#123;</span><br><span class="line">  immediate: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// `callback` é acionada imediatamente com o novo valor de 'a'</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="vm-set">vm.$set( target, key, value )</h3>
-
-<ul>
+<h3 id="vm-set-target-key-value"><a href="#vm-set-target-key-value" class="headerlink" title="vm.$set( target, key, value )"></a>vm.$set( target, key, value )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{Object | Array} target</code></li>
@@ -1264,9 +1243,7 @@
 <li><p><strong>Ver também:</strong> <a href="#Vue-set">Vue.set</a></p>
 </li>
 </ul>
-<h3 id="vm-delete">vm.$delete( target, key )</h3>
-
-<ul>
+<h3 id="vm-delete-target-key"><a href="#vm-delete-target-key" class="headerlink" title="vm.$delete( target, key )"></a>vm.$delete( target, key )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{Object | Array} target</code></li>
@@ -1279,9 +1256,7 @@
 <li><p><strong>Ver também:</strong> <a href="#Vue-delete">Vue.delete</a></p>
 </li>
 </ul>
-<h2 id="Metodos-da-Instancia-Eventos"><a href="#Metodos-da-Instancia-Eventos" class="headerlink" title="Métodos da Instância / Eventos"></a>Métodos da Instância / Eventos</h2><h3 id="vm-on">vm.$on( event, callback )</h3>
-
-<ul>
+<h2 id="Metodos-da-Instancia-Eventos"><a href="#Metodos-da-Instancia-Eventos" class="headerlink" title="Métodos da Instância / Eventos"></a>Métodos da Instância / Eventos</h2><h3 id="vm-on-event-callback"><a href="#vm-on-event-callback" class="headerlink" title="vm.$on( event, callback )"></a>vm.$on( event, callback )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{string | Array&lt;string&gt;} event</code> (array somente é suportado em 2.2.0+)</li>
@@ -1295,9 +1270,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.$on(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(msg)</span><br><span class="line">&#125;)</span><br><span class="line">vm.$emit(<span class="string">'test'</span>, <span class="string">'hi'</span>)</span><br><span class="line"><span class="comment">// =&gt; "hi"</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="vm-once">vm.$once( event, callback )</h3>
-
-<ul>
+<h3 id="vm-once-event-callback"><a href="#vm-once-event-callback" class="headerlink" title="vm.$once( event, callback )"></a>vm.$once( event, callback )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{string} event</code></li>
@@ -1308,9 +1281,7 @@
 <p>Escuta um evento personalizado, porém somente uma vez. A escuta será removida assim que for acionada pela primeira vez.</p>
 </li>
 </ul>
-<h3 id="vm-off">vm.$off( [event, callback] )</h3>
-
-<ul>
+<h3 id="vm-off-event-callback"><a href="#vm-off-event-callback" class="headerlink" title="vm.$off( [event, callback] )"></a>vm.$off( [event, callback] )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{string | Array&lt;string&gt;} event</code> (array somente é suportado em 2.2.2+)</li>
@@ -1329,9 +1300,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="vm-emit">vm.$emit( event, […args] )</h3>
-
-<ul>
+<h3 id="vm-emit-event-…args"><a href="#vm-emit-event-…args" class="headerlink" title="vm.$emit( event, […args] )"></a>vm.$emit( event, […args] )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{string} event</code></li>
@@ -1340,9 +1309,7 @@
 <p>Lança um evento na instância atual. Qualquer argumento adicional será passado para a função de <em>callback</em> da escuta.</p>
 </li>
 </ul>
-<h2 id="Metodos-da-Instancia-Ciclo-de-Vida"><a href="#Metodos-da-Instancia-Ciclo-de-Vida" class="headerlink" title="Métodos da Instância / Ciclo-de-Vida"></a>Métodos da Instância / Ciclo-de-Vida</h2><h3 id="vm-mount">vm.$mount( [elementOrSelector] )</h3>
-
-<ul>
+<h2 id="Metodos-da-Instancia-Ciclo-de-Vida"><a href="#Metodos-da-Instancia-Ciclo-de-Vida" class="headerlink" title="Métodos da Instância / Ciclo-de-Vida"></a>Métodos da Instância / Ciclo-de-Vida</h2><h3 id="vm-mount-elementOrSelector"><a href="#vm-mount-elementOrSelector" class="headerlink" title="vm.$mount( [elementOrSelector] )"></a>vm.$mount( [elementOrSelector] )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{Element | string} [elementOrSelector]</code></li>
@@ -1366,16 +1333,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="vm-forceUpdate">vm.$forceUpdate()</h3>
-
-<ul>
+<h3 id="vm-forceUpdate"><a href="#vm-forceUpdate" class="headerlink" title="vm.$forceUpdate()"></a>vm.$forceUpdate()</h3><ul>
 <li><p><strong>Uso:</strong></p>
 <p>Força a instância do Vue a renderizar novamente. Note que isso não afeta todos os componentes filhos, apenas a própria instância e os componentes filhos com conteúdo em inseridos em seus respectivos <em>slots</em>.</p>
 </li>
 </ul>
-<h3 id="vm-nextTick">vm.$nextTick( [callback] )</h3>
-
-<ul>
+<h3 id="vm-nextTick-callback"><a href="#vm-nextTick-callback" class="headerlink" title="vm.$nextTick( [callback] )"></a>vm.$nextTick( [callback] )</h3><ul>
 <li><p><strong>Argumentos:</strong></p>
 <ul>
 <li><code>{Function} [callback]</code></li>
@@ -1397,9 +1360,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="vm-destroy">vm.$destroy()</h3>
-
-<ul>
+<h3 id="vm-destroy"><a href="#vm-destroy" class="headerlink" title="vm.$destroy()"></a>vm.$destroy()</h3><ul>
 <li><p><strong>Uso:</strong></p>
 <p>Destrói completamente a <em>vm</em>. Limpa todas as suas conexões com outras <em>vms</em>, desvincula (<em>unbind</em>) todas as suas diretivas e desliga todas as escutas de eventos.</p>
 <p>Aciona os <em>hooks</em> <code>beforeDestroy</code> e <code>destroyed</code>.</p>

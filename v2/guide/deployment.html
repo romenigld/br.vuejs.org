@@ -70,6 +70,9 @@
       ga('create', 'UA-46852172-1', 'br.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
   <body class="docs">
     <div id="mobile-bar" >
@@ -144,9 +147,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -238,9 +241,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -263,16 +266,18 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Patrocínios Platina</span><br>
+        <span>Patrocínios Platina</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png" style="margin-top:-5px">
+          <img src="/images/tooltwist.png">
         </a>
-        <a href="https://www.infinitynewtab.com/donate/index.html" target="_blank" class="logo">
-          <img src="/images/infinitynewtab.png">
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
         </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Seja um Patrocinador
@@ -385,7 +390,7 @@
     
     
     <li>
-      <a href="/v2/guide/class-and-style.html" class="sidebar-link">Interligações em Classes e Estilos</a>
+      <a href="/v2/guide/class-and-style.html" class="sidebar-link">Interligações de Classe e Estilo</a>
     </li>
   
     
@@ -846,7 +851,7 @@
   
     <h1>Publicando em Produção</h1>
   
-  <h2 id="Habilitando-o-Modo-de-Producao"><a href="#Habilitando-o-Modo-de-Producao" class="headerlink" title="Habilitando o Modo de Produção"></a>Habilitando o Modo de Produção</h2><p>Em desenvolvimento, Vue proporciona uma grande quantidade de avisos para lhe ajudar a escapar das enrascadas mais comuns. Entretanto, estas Strings de aviso se torna desnecessárias em produção e sobrecarregam o tamanho de sua aplicação. Além disso, algumas checagens têm um pequeno custo de desempenho durante a execução que pode ser evitado ao habilitar o modo de produção.</p>
+  <h2 id="Habilitando-o-Modo-de-Producao"><a href="#Habilitando-o-Modo-de-Producao" class="headerlink" title="Habilitando o Modo de Produção"></a>Habilitando o Modo de Produção</h2><p>Em desenvolvimento, Vue proporciona uma grande quantidade de avisos para lhe ajudar a escapar das enrascadas mais comuns. Entretanto, estas Strings de aviso se tornam desnecessárias em produção e sobrecarregam o tamanho de sua aplicação. Além disso, algumas checagens têm um pequeno custo de desempenho durante a execução que pode ser evitado ao habilitar o modo de produção.</p>
 <h3 id="Sem-Empacotadores"><a href="#Sem-Empacotadores" class="headerlink" title="Sem Empacotadores"></a>Sem Empacotadores</h3><p>Se você está utilizando a compilação completa, ou seja, incluindo diretamente o Vue através de uma <em>tag</em> <code>&lt;script&gt;</code> sem uma ferramenta de <em>build</em>, tenha certeza que utilizará a versão minificada (<code>vue.min.js</code>) para produção. Ambas as versões podem ser encontradas no <a href="installation.html#Inclusao-Direta-com-lt-script-gt">guia de Instalação</a>.</p>
 <h3 id="Com-Empacotadores"><a href="#Com-Empacotadores" class="headerlink" title="Com Empacotadores"></a>Com Empacotadores</h3><p>Utilizando uma ferramenta de <em>build</em> como Webpack ou Browserify, o modo de produção será determinado pelo valor da variável <code>process.env.NODE_ENV</code> internamente no código-fonte do Vue, sendo o modo de desenvolvimento seu valor padrão. Ambos os empacotadores oferecem maneiras de sobrescrever esta variável para habilitar o modo de produção, sendo que as mensagens de aviso serão removidas pelos minificadores durante o empacotamento. Todos os modelos de projeto <code>vue-cli</code> já vêm com isto pré-configurado para você, mas pode ser interessante saber como funciona:</p>
 <h4 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h4><p>Utilize o <a href="https://webpack.js.org/plugins/define-plugin/" target="_blank" rel="noopener">DefinePlugin</a> do Webpack para indicar o ambiente de produção, de forma que blocos de aviso possam ser imediatamente removidos pelo UglifyJS durante a minificação. Exemplo:</p>
@@ -857,8 +862,13 @@
 <li><p>Aplique uma transformação <a href="https://github.com/hughsk/envify" target="_blank" rel="noopener">envify</a> global em seu pacote. Isto permite que o minificador remova todos os avisos incorporados ao código-fonte do Vue. Exemplo:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">NODE_ENV=production browserify -g envify -e main.js | uglifyjs -c -m &gt; build.js</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Or, using <a href="https://github.com/hughsk/envify" target="_blank" rel="noopener">envify</a> with Gulp:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Use the envify custom module to specify environment variables</span></span><br><span class="line"><span class="keyword">var</span> envify = <span class="built_in">require</span>(<span class="string">'envify/custom'</span>)</span><br><span class="line"></span><br><span class="line">browserify(browserifyOptions)</span><br><span class="line">  .transform(vueify),</span><br><span class="line">  .transform(</span><br><span class="line">    <span class="comment">// Required in order to process node_modules files</span></span><br><span class="line">    &#123; <span class="attr">global</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">    envify(&#123; <span class="attr">NODE_ENV</span>: <span class="string">'production'</span> &#125;)</span><br><span class="line">  )</span><br><span class="line">  .bundle()</span><br></pre></td></tr></table></figure>
+<li><p>Ou, usando <a href="https://github.com/hughsk/envify" target="_blank" rel="noopener">envify</a> com Gulp:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Use o módulo `custom` do envify para especificar variáveis de ambiente</span></span><br><span class="line"><span class="keyword">var</span> envify = <span class="built_in">require</span>(<span class="string">'envify/custom'</span>)</span><br><span class="line"></span><br><span class="line">browserify(browserifyOptions)</span><br><span class="line">  .transform(vueify)</span><br><span class="line">  .transform(</span><br><span class="line">    <span class="comment">// Obrigatório para processar arquivos em node_modules</span></span><br><span class="line">    &#123; <span class="attr">global</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">    envify(&#123; <span class="attr">NODE_ENV</span>: <span class="string">'production'</span> &#125;)</span><br><span class="line">  )</span><br><span class="line">  .bundle()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>Ou, usando <a href="https://github.com/hughsk/envify" target="_blank" rel="noopener">envify</a> com Grunt e <a href="https://github.com/jmreidy/grunt-browserify" target="_blank" rel="noopener">grunt-browserify</a>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Use o módulo `custom` do envify para especificar variáveis de ambiente</span></span><br><span class="line"><span class="keyword">var</span> envify = <span class="built_in">require</span>(<span class="string">'envify/custom'</span>)</span><br><span class="line"></span><br><span class="line">browserify: &#123;</span><br><span class="line">  dist: &#123;</span><br><span class="line">    options: &#123;</span><br><span class="line">      <span class="comment">// Função para desviar da ordem padrão do grunt-browserify</span></span><br><span class="line">      configure: <span class="function"><span class="params">b</span> =&gt;</span> b</span><br><span class="line">        .transform(<span class="string">'vueify'</span>)</span><br><span class="line">        .transform(</span><br><span class="line">          <span class="comment">// Obrigatório para processar arquivos em node_modules</span></span><br><span class="line">          &#123; <span class="attr">global</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">          envify(&#123; <span class="attr">NODE_ENV</span>: <span class="string">'production'</span> &#125;)</span><br><span class="line">        )</span><br><span class="line">        .bundle()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="Rollup"><a href="#Rollup" class="headerlink" title="Rollup"></a>Rollup</h4><p>O procedimento é parecido com o do Webpack. Configure utilizando o <a href="https://github.com/rollup/rollup-plugin-replace" target="_blank" rel="noopener">rollup-plugin-replace</a>:</p>

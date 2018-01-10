@@ -70,6 +70,9 @@
       ga('create', 'UA-46852172-1', 'br.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
   <body class="docs">
     <div id="mobile-bar" >
@@ -144,9 +147,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -238,9 +241,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -263,16 +266,18 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Patrocínios Platina</span><br>
+        <span>Patrocínios Platina</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png" style="margin-top:-5px">
+          <img src="/images/tooltwist.png">
         </a>
-        <a href="https://www.infinitynewtab.com/donate/index.html" target="_blank" class="logo">
-          <img src="/images/infinitynewtab.png">
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
         </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Seja um Patrocinador
@@ -385,7 +390,7 @@
     
     
     <li>
-      <a href="/v2/guide/class-and-style.html" class="sidebar-link">Interligações em Classes e Estilos</a>
+      <a href="/v2/guide/class-and-style.html" class="sidebar-link">Interligações de Classe e Estilo</a>
     </li>
   
     
@@ -859,7 +864,10 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.b = <span class="string">'hi'</span></span><br></pre></td></tr></table></figure>
 <p>Então as mudanças em <code>b</code> não irão disparar qualquer atualização na interface. Se você sabe que precisará de uma propriedade no futuro, mas ela inicia vazia ou não existente, precisará especificar algum valor inicial. Por exemplo:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  newTodoText: <span class="string">''</span>,</span><br><span class="line">  visitCount: <span class="number">0</span>,</span><br><span class="line">  hideCompletedTodos: <span class="literal">false</span>,</span><br><span class="line">  todos: [],</span><br><span class="line">  error: <span class="literal">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Em adição às propriedades de dados, instâncias Vue expõem uma quantidade relevante de propriedades e métodos. Estas são diferenciadas pelo prefixo <code>$</code> para não confundí-las com propriedades definidas pelo usuário. Por exemplo:</p>
+<p>A única exceção é ao usar <code>Object.freeze()</code>, que previne propriedades existentes de serem modificadas. Também significa que o sistema de reatividade não pode <em>rastrear</em> mudanças.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  foo: <span class="string">'bar'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.freeze(obj)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      obj</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; obj.foo &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- não vai mais atualizar obj.foo! --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"obj.foo = 'baz'"</span>&gt;</span>Mudá-lo<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Em adição às propriedades de dados, instâncias Vue expõem uma quantidade relevante de propriedades e métodos. Estes são diferenciados pelo prefixo <code>$</code> para não confundí-los com propriedades definidas pelo usuário. Por exemplo:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#exemplo'</span>,</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.$data === data <span class="comment">// =&gt; true</span></span><br><span class="line">vm.$el === <span class="built_in">document</span>.getElementById(<span class="string">'exemplo'</span>) <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// $watch é um método da instância</span></span><br><span class="line">vm.$watch(<span class="string">'a'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Esta função será executada quando `vm.a` mudar</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>No futuro, você pode consultar a <a href="../api/#Propriedades-de-Instancia">documentação da API</a> para a lista completa de propriedades e métodos da instância.</p>
 <h2 id="Ciclo-de-Vida-da-Instancia"><a href="#Ciclo-de-Vida-da-Instancia" class="headerlink" title="Ciclo de Vida da Instância"></a>Ciclo de Vida da Instância</h2><p>Cada instância Vue passa por uma série de etapas em sua inicialização - por exemplo, é necessário configurar a observação de dados, compilar o <em>template</em>, montar a instância no DOM, atualizar o DOM quando os dados forem alterados. Ao longo do caminho, ocorrerá a invocação de alguns <strong>gatilhos de ciclo de vida</strong>, oferecendo a oportunidade de executar lógicas personalizadas em etapas específicas.</p>

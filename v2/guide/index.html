@@ -70,6 +70,9 @@
       ga('create', 'UA-46852172-1', 'br.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
   <body class="docs">
     <div id="mobile-bar" >
@@ -144,9 +147,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -238,9 +241,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -263,16 +266,18 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Patrocínios Platina</span><br>
+        <span>Patrocínios Platina</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png" style="margin-top:-5px">
+          <img src="/images/tooltwist.png">
         </a>
-        <a href="https://www.infinitynewtab.com/donate/index.html" target="_blank" class="logo">
-          <img src="/images/infinitynewtab.png">
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
         </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Seja um Patrocinador
@@ -385,7 +390,7 @@
     
     
     <li>
-      <a href="/v2/guide/class-and-style.html" class="sidebar-link">Interligações em Classes e Estilos</a>
+      <a href="/v2/guide/class-and-style.html" class="sidebar-link">Interligações de Classe e Estilo</a>
     </li>
   
     
@@ -849,6 +854,7 @@
   <p class="tip"><strong>Nota da Equipe de Tradução</strong><br>Esta tradução é um projeto <em>open-source</em> mantido por um grupo de desenvolvedores, e você também pode colaborar! Caso encontre algum erro na tradução, por favor crie uma <em>issue</em> em <a href="https://github.com/vuejs-br/br.vuejs.org/issues" target="_blank" rel="noopener">nosso projeto no GitHub</a>. Sua participação é muito importante!</p>
 
 <h2 id="O-que-e-Vue-js"><a href="#O-que-e-Vue-js" class="headerlink" title="O que é Vue.js?"></a>O que é Vue.js?</h2><p>Vue (pronuncia-se /vjuː/, como <strong>view</strong>, em inglês) é um <strong>framework progressivo</strong> para a construção de interfaces de usuário. Ao contrário de outros <em>frameworks</em> monolíticos, Vue foi projetado desde sua concepção para ser adotável incrementalmente. A biblioteca principal é focada exclusivamente na camada visual (<em>view layer</em>), sendo fácil adotar e integrar com outras bibliotecas ou projetos existentes. Por outro lado, Vue também é perfeitamente capaz de dar poder a sofisticadas <em>Single-Page Applications</em> quando usado em conjunto com <a href="single-file-components.html">ferramentas modernas</a> e <a href="https://github.com/vuejs/awesome-vue#components--libraries" target="_blank" rel="noopener">bibliotecas de apoio</a>.</p>
+<p>Se você gostaria de saber mais sobre Vue antes de mergulhar nele, nós <a id="modal-player" href="javascript:;" target="_blank" rel="noopener">criamos um vídeo</a> passeando pelos princípios básicos com um exemplo de projeto.</p>
 <p>Se você é um desenvolvedor <em>frontend</em> experiente e quer saber como Vue se compara a outras bibliotecas/<em>frameworks</em>, confira a <a href="comparison.html">Comparação com Outros Frameworks</a>.</p>
 <h2 id="Primeiros-Passos"><a href="#Primeiros-Passos" class="headerlink" title="Primeiros Passos"></a>Primeiros Passos</h2><p class="tip">O guia oficial supõe um nível intermediário em HTML, CSS e JavaScript. Se você é totalmente novo no mundo do <em>frontend</em>, mergulhar diretamente em um <em>framework</em> pode não ser a melhor ideia para começar - compreenda primeiro o básico e depois volte! Experiência anterior com outros <em>frameworks</em> ajuda, mas não é obrigatória.</p>
 
@@ -1009,7 +1015,7 @@ var app7 = new Vue({
 })
 </script>
 
-<p>Este é um exemplo fictício, mas conseguimos separar nossa aplicação em duas pequenas unidades, sendo que o componente filho está razoavelmente bem desacoplado do componente pai graças à funcionalidade de <code>props</code>. Ppodemos agora melhorar nosso componente <code>&lt;todo-item&gt;</code> com <em>template</em> e lógica mais complexos, sem afetar o restante.</p>
+<p>Este é um exemplo fictício, mas conseguimos separar nossa aplicação em duas pequenas unidades, sendo que o componente filho está razoavelmente bem desacoplado do componente pai graças à funcionalidade de <code>props</code>. Podemos agora melhorar nosso componente <code>&lt;todo-item&gt;</code> com <em>template</em> e lógica mais complexos, sem afetar o restante.</p>
 <p>Em uma aplicação grande, é essencial dividir todo o aplicativo em componentes para tornar o desenvolvimento gerenciável. Falaremos mais sobre componentes <a href="components.html">futuramente neste guia</a>, mas aqui está um exemplo (imaginário) da aparência que o <em>template</em> de um aplicativo poderia ter com o uso de componentes:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">app-nav</span>&gt;</span><span class="tag">&lt;/<span class="name">app-nav</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">app-view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">app-sidebar</span>&gt;</span><span class="tag">&lt;/<span class="name">app-sidebar</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">app-content</span>&gt;</span><span class="tag">&lt;/<span class="name">app-content</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">app-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="Relacao-com-Elementos-Customizados"><a href="#Relacao-com-Elementos-Customizados" class="headerlink" title="Relação com Elementos Customizados"></a>Relação com Elementos Customizados</h3><p>Você pode ter notado que componentes Vue são muito similares aos <strong>Elementos Customizados</strong>, parte da <a href="https://www.w3.org/wiki/WebComponents/" target="_blank" rel="noopener">Especificação de Web Components</a>. Isto ocorre pois a sintaxe de componentes Vue foi vagamente modelada a partir da especificação. Por exemplo, implementamos a <a href="https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md" target="_blank" rel="noopener">Slot API</a> e o atributo especial <code>is</code>. Entretanto, existem algumas diferenças fundamentais:</p>
@@ -1020,6 +1026,7 @@ var app7 = new Vue({
 </li>
 </ol>
 <h2 id="Pronto-para-Mais"><a href="#Pronto-para-Mais" class="headerlink" title="Pronto para Mais?"></a>Pronto para Mais?</h2><p>Nós introduzimos brevemente os recursos mais básicos do núcleo do Vue.js - o resto deste guia se aprofundará neles e em outros recursos avançados em um nível muito maior de detalhes, portanto certifique-se de ler tudo!</p>
+<div id="video-modal" class="modal"><div class="vimeo-space" style="padding: 56.25% 0 0 0; position: relative;"><iframe src="https://player.vimeo.com/video/247494684" style="height: 100%; left: 0; position: absolute; top: 0; width: 100%; margin: 0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
 
   
     <div class="guide-links">

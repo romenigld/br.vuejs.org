@@ -70,6 +70,9 @@
       ga('create', 'UA-46852172-1', 'br.vuejs.org');
       ga('send', 'pageview');
     </script>
+
+    <!-- vimeo analytics -->
+    <script type="text/javascript" defer="defer" src="https://extend.vimeocdn.com/ga/72160148.js"></script>
   </head>
   <body class="docs">
     <div id="mobile-bar" >
@@ -144,9 +147,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -238,9 +241,9 @@
   <a class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
-      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja Oficial</a></li>
-      <li><a href="https://opencollective.com/vuejs" target="_blank" class="nav-link">Ajude no OpenCollective</a></li>
-      <li><a href="https://www.patreon.com/evanyou" target="_blank" class="nav-link">Ajude Evan no Patreon</a></li>
+      <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
 </li>
@@ -263,16 +266,18 @@
     </ul>
     <div class="list">
       <div class="main-sponsor">
-        <span>Patrocínios Platina</span><br>
+        <span>Patrocínios Platina</span>
+        <div>
         <a href="https://stdlib.com" target="_blank" class="logo">
           <img src="/images/stdlib.png">
         </a>
         <a href="http://tooltwist.com/" target="_blank" class="logo">
-          <img src="/images/tooltwist.png" style="margin-top:-5px">
+          <img src="/images/tooltwist.png">
         </a>
-        <a href="https://www.infinitynewtab.com/donate/index.html" target="_blank" class="logo">
-          <img src="/images/infinitynewtab.png">
+        <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
+          <img src="/images/vueschool.png">
         </a>
+        </div>
       </div>
       <a class="become-backer" href="/support-vuejs">
         Seja um Patrocinador
@@ -385,7 +390,7 @@
     
     
     <li>
-      <a href="/v2/guide/class-and-style.html" class="sidebar-link">Interligações em Classes e Estilos</a>
+      <a href="/v2/guide/class-and-style.html" class="sidebar-link">Interligações de Classe e Estilo</a>
     </li>
   
     
@@ -846,17 +851,17 @@
   
     <h1>Instalação</h1>
   
-  <h3 id="Sobre-a-Compatibilidade"><a href="#Sobre-a-Compatibilidade" class="headerlink" title="Sobre a Compatibilidade"></a>Sobre a Compatibilidade</h3><p>Vue <strong>não</strong> suporta IE8 e versões anteriores, porque são usadas funcionalidades ECMAScript 5 que são incompatíveis com o IE8. Entretanto, suporta todos os <a href="http://caniuse.com/#feat=es5" target="_blank" rel="noopener">navegadores compatíveis com ECMAScript 5</a>.</p>
-<h3 id="Notas-de-Lancamento"><a href="#Notas-de-Lancamento" class="headerlink" title="Notas de Lançamento"></a>Notas de Lançamento</h3><p>Última versão estável: 2.5.9</p>
+  <h3 id="Sobre-a-Compatibilidade"><a href="#Sobre-a-Compatibilidade" class="headerlink" title="Sobre a Compatibilidade"></a>Sobre a Compatibilidade</h3><p>Vue <strong>não</strong> suporta IE8 e versões anteriores, pois usa funcionalidades ECMAScript 5 incompatíveis nestes. Entretanto, suporta todos os <a href="https://caniuse.com/#feat=es5" target="_blank" rel="noopener">navegadores compatíveis com ECMAScript 5</a>.</p>
+<h3 id="Notas-de-Lancamento"><a href="#Notas-de-Lancamento" class="headerlink" title="Notas de Lançamento"></a>Notas de Lançamento</h3><p>Última versão estável: 2.5.13</p>
 <p>Notas detalhadas para cada versão estão disponíveis no <a href="https://github.com/vuejs/vue/releases" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Vue-Devtools"><a href="#Vue-Devtools" class="headerlink" title="Vue Devtools"></a>Vue Devtools</h2><p>Antes de mais nada, ao utilizar Vue também recomendamos que você instale a extensão <a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">Vue Devtools</a> em seu navegador, lhe permitindo inspecionar e depurar suas aplicações Vue em uma interface mais amigável.</p>
 <h2 id="Inclusao-Direta-com-lt-script-gt"><a href="#Inclusao-Direta-com-lt-script-gt" class="headerlink" title="Inclusão Direta com &lt;script&gt;"></a>Inclusão Direta com <code>&lt;script&gt;</code></h2><p>Simplesmente faça o <em>download</em> e inclua a <em>tag</em> <code>&lt;script&gt;</code> com o caminho correto. <code>Vue</code> será registrado como uma variável global.</p>
 <p class="tip">Não use a versão minificada (de produção) durante o desenvolvimento. Você irá perder todos os avisos interessantes para os erros mais comuns!</p>
 
-<div id="downloads"><br><a class="button" href="/js/vue.js" download="">Versão Desenvolvedor</a><span class="light info">Mensagens de erro completas e modo de depuração</span><br><br><a class="button" href="/js/vue.min.js" download="">Versão de Produção</a><span class="light info">Sem mensagens de erro, 30.95KB min+gzip</span><br></div>
+<div id="downloads"><br><a class="button" href="/js/vue.js" download="">Versão Desenvolvedor</a><span class="light info">Mensagens de erro completas e modo de depuração</span><br><br><a class="button" href="/js/vue.min.js" download="">Versão de Produção</a><span class="light info">Sem mensagens de erro, 30.67KB min+gzip</span><br></div>
 
 <h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>Recomendado: <a href="https://cdn.jsdelivr.net/npm/vue" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue</a>, reflete a última versão assim que ela é disponibilizada no <code>npm</code>. Você também pode navegar pelo código-fonte do pacote em <a href="https://cdn.jsdelivr.net/npm/vue/" target="_blank" rel="noopener">https://cdn.jsdelivr.net/npm/vue/</a>.</p>
-<p>Também disponível no <a href="https://unpkg.com/vue" target="_blank" rel="noopener">unpkg</a> e no <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.9/vue.js" target="_blank" rel="noopener">cdnjs</a> (cdnjs leva algum tempo para sincronizar com a última versão logo que é lançada).</p>
+<p>Também disponível no <a href="https://unpkg.com/vue" target="_blank" rel="noopener">unpkg</a> e no <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" target="_blank" rel="noopener">cdnjs</a> (cdnjs leva algum tempo para sincronizar com a última versão logo que é lançada).</p>
 <h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>NPM é o método de instalação recomendado para construção de aplicações em larga escala com o Vue. Ele combina perfeitamente com <em>module bundlers</em>, tais como <a href="https://webpack.js.org/" target="_blank" rel="noopener">Webpack</a> ou <a href="http://browserify.org/" target="_blank" rel="noopener">Browserify</a>. Vue também oferece ferramentas para a criação de <a href="single-file-components.html">Componentes Single-File</a>.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># última versão estável</span></span><br><span class="line">$ npm install vue</span><br></pre></td></tr></table></figure>
 <h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>Vue.js oferece um <a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">CLI oficial</a> para rapidamente construir ambiciosas <em>Single Page Applications</em>. Ele possui uma série de funcionalidades e configurações prontas para uso, para o desenvolvimento de aplicações <em>frontend</em> modernas. Leva apenas alguns minutos para estar executando com <em>hot-reload</em>, <em>lint</em> ao salvar, e compilações prontas para produção:</p>
