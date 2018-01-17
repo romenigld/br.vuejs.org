@@ -144,11 +144,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -238,11 +238,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -276,6 +276,9 @@
         </a>
         <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
           <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
         </a>
         </div>
       </div>
@@ -851,10 +854,11 @@
   
     <h1>Migração do Vue Router 0.7.x</h1>
   
-  <blockquote>
+  
+    <blockquote>
 <p>Somente Vue Router 2 é compatível com Vue 2, então se você estiver atualizando o Vue, terá de atualizar também o Vue Router. Esta é a razão pela qual incluímos detalhes de migração aqui na documentação principal. Para um guia completo em como usar o novo Vue Router, veja a <a href="https://router.vuejs.org/en/" target="_blank" rel="noopener">documentação do Vue Router</a>.</p>
 </blockquote>
-<h2 id="Inicializacao-do-Roteador"><a href="#Inicializacao-do-Roteador" class="headerlink" title="Inicialização do Roteador"></a>Inicialização do Roteador</h2><h3 id="router-start-obsoleto"><a href="#router-start-obsoleto" class="headerlink" title="router.start obsoleto"></a><code>router.start</code> <sup>obsoleto</sup></h3><p>Não há mais uma API especial para inicializar um aplicativo com Vue Router. Ao invés de:</p>
+<h2 id="Inicializacao-do-Roteador"><a href="#Inicializacao-do-Roteador" class="headerlink" title="Inicialização do Roteador"></a>Inicialização do Roteador</h2><h3 id="router-start-obsoleto"><a href="#router-start-obsoleto" class="headerlink" title="router.start obsoleto"></a><code>router.start</code> <sup>obsoleto</sup></h3><p>Não há mais uma API especial para inicializar um aplicativo com Vue Router. Em vez de:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">router.start(&#123;</span><br><span class="line">  template: <span class="string">'&lt;router-view&gt;&lt;/router-view&gt;'</span></span><br><span class="line">&#125;, <span class="string">'#app'</span>)</span><br></pre></td></tr></table></figure>
 <p>Passe uma propriedade <code>router</code> para a instância Vue:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  router: router,</span><br><span class="line">  template: <span class="string">'&lt;router-view&gt;&lt;/router-view&gt;'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -931,7 +935,7 @@
   <p>Execute a <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="noopener">ferramenta de migração</a> para encontrar casos propriedades arbitrárias em rotas não inseridas em <code>meta</code>.</p>
 </div>
 
-<h3 id="Sintaxe-para-Arrays-em-Queries-removed"><a href="#Sintaxe-para-Arrays-em-Queries-removed" class="headerlink" title="Sintaxe para Arrays em Queries removed"></a>Sintaxe para Arrays em Queries <sup>removed</sup></h3><p>Ao passar Arrays como parâmetros de queries, a sintaxe da <em>query string</em> não é mais <code>/foo?users[]=Tom&amp;users[]=Jerry</code>. Ao invés disto, a nova sintaxe é <code>/foo?users=Tom&amp;users=Jerry</code>. Internamente, <code>$route.query.users</code> ainda será um Array, mas se houver somente um parâmetro na <em>query</em>: <code>/foo?users=Tom</code>, ao acessar diretamente esta rota, não haverá uma maneira do roteador saber se estamos esperando que <code>users</code> seja um Array. Por este motivo, considere adicionar um dado computado, substituindo qualquer acesso a <code>$route.query.users</code> por ele:</p>
+<h3 id="Sintaxe-para-Arrays-em-Queries-removed"><a href="#Sintaxe-para-Arrays-em-Queries-removed" class="headerlink" title="Sintaxe para Arrays em Queries removed"></a>Sintaxe para Arrays em Queries <sup>removed</sup></h3><p>Ao passar Arrays como parâmetros de queries, a sintaxe da <em>query string</em> não é mais <code>/foo?users[]=Tom&amp;users[]=Jerry</code>. Em vez disto, a nova sintaxe é <code>/foo?users=Tom&amp;users=Jerry</code>. Internamente, <code>$route.query.users</code> ainda será um Array, mas se houver somente um parâmetro na <em>query</em>: <code>/foo?users=Tom</code>, ao acessar diretamente esta rota, não haverá uma maneira do roteador saber se estamos esperando que <code>users</code> seja um Array. Por este motivo, considere adicionar um dado computado, substituindo qualquer acesso a <code>$route.query.users</code> por ele:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  computed: &#123;</span><br><span class="line">    <span class="comment">// assim, `users` serão serão um Array</span></span><br><span class="line">    users () &#123;</span><br><span class="line">      <span class="keyword">const</span> users = <span class="keyword">this</span>.$route.query.users</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Array</span>.isArray(users) ? users : [users]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Identificacao-das-Rotas"><a href="#Identificacao-das-Rotas" class="headerlink" title="Identificação das Rotas"></a>Identificação das Rotas</h2><p>Agora a identificação das rotas utiliza <a href="https://github.com/pillarjs/path-to-regexp" target="_blank" rel="noopener">path-to-regexp</a> em seu interior, tornando-a muito mais flexível do que anteriormente.</p>
 <h3 id="Um-ou-Mais-Parametros-Nomeados-alterado"><a href="#Um-ou-Mais-Parametros-Nomeados-alterado" class="headerlink" title="Um ou Mais Parâmetros Nomeados alterado"></a>Um ou Mais Parâmetros Nomeados <sup>alterado</sup></h3><p>A sintaxe mudou levemente, assim <code>/category/*tags</code>, por exemplo, deveria ser atualizado para <code>/category/:tags+</code>.</p>
@@ -987,7 +991,7 @@
   <p>Execute a <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="noopener">ferramenta de migração</a> para encontrar casos de <code>history: true</code>.</p>
 </div>
 
-<h3 id="abstract-true-subsituido"><a href="#abstract-true-subsituido" class="headerlink" title="abstract: true subsituído"></a><code>abstract: true</code> <sup>subsituído</sup></h3><p>Todos os modos de roteamento foram condensados em uma simples <a href="https://router.vuejs.org/en/api/options.html#mode" target="_blank" rel="noopener">opção <code>mode</code></a>. Atualize:</p>
+<h3 id="abstract-true-substituido"><a href="#abstract-true-substituido" class="headerlink" title="abstract: true substituído"></a><code>abstract: true</code> <sup>substituído</sup></h3><p>Todos os modos de roteamento foram condensados em uma simples <a href="https://router.vuejs.org/en/api/options.html#mode" target="_blank" rel="noopener">opção <code>mode</code></a>. Atualize:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  abstract: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>Para:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  mode: <span class="string">'abstract'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -997,7 +1001,7 @@
   <p>Execute a <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="noopener">ferramenta de migração</a> para encontrar casos de <code>abstract: true</code>.</p>
 </div>
 
-<h2 id="Opcoes-do-Roteador-Diversos"><a href="#Opcoes-do-Roteador-Diversos" class="headerlink" title="Opções do Roteador: Diversos"></a>Opções do Roteador: Diversos</h2><h3 id="saveScrollPosition-subsituido"><a href="#saveScrollPosition-subsituido" class="headerlink" title="saveScrollPosition subsituído"></a><code>saveScrollPosition</code> <sup>subsituído</sup></h3><p>Foi substituído com uma <a href="https://router.vuejs.org/en/advanced/scroll-behavior.html" target="_blank" rel="noopener">opção <code>scrollBehavior</code></a> que aceita uma função, de forma que o comportamento de rolagem possa ser completamente personalizado - inclusive para cada rota. Abre-se muitas novas possibilidades, mas para simplesmente replicar o antigo comportamento de:</p>
+<h2 id="Opcoes-do-Roteador-Diversos"><a href="#Opcoes-do-Roteador-Diversos" class="headerlink" title="Opções do Roteador: Diversos"></a>Opções do Roteador: Diversos</h2><h3 id="saveScrollPosition-substituido"><a href="#saveScrollPosition-substituido" class="headerlink" title="saveScrollPosition substituído"></a><code>saveScrollPosition</code> <sup>substituído</sup></h3><p>Foi substituído com uma <a href="https://router.vuejs.org/en/advanced/scroll-behavior.html" target="_blank" rel="noopener">opção <code>scrollBehavior</code></a> que aceita uma função, de forma que o comportamento de rolagem possa ser completamente personalizado - inclusive para cada rota. Abre-se muitas novas possibilidades, mas para simplesmente replicar o antigo comportamento de:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">saveScrollPosition: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>Você pode substituir com uma função como esta:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">scrollBehavior: <span class="function"><span class="keyword">function</span> (<span class="params">to, from, savedPosition</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> savedPosition || &#123; <span class="attr">x</span>: <span class="number">0</span>, <span class="attr">y</span>: <span class="number">0</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1035,7 +1039,7 @@
   <p>Execute a <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="noopener">ferramenta de migração</a> para encontrar casos de <code>active</code>.</p>
 </div>
 
-<h3 id="canActivate-subsituido"><a href="#canActivate-subsituido" class="headerlink" title="canActivate subsituído"></a><code>canActivate</code> <sup>subsituído</sup></h3><p>Em seu lugar, use <a href="https://router.vuejs.org/en/advanced/navigation-guards.html#perroute-guard" target="_blank" rel="noopener"><code>beforeEnter</code></a> no roteador.</p>
+<h3 id="canActivate-substituido"><a href="#canActivate-substituido" class="headerlink" title="canActivate substituído"></a><code>canActivate</code> <sup>substituído</sup></h3><p>Em seu lugar, use <a href="https://router.vuejs.org/en/advanced/navigation-guards.html#perroute-guard" target="_blank" rel="noopener"><code>beforeEnter</code></a> no roteador.</p>
 
 <div class="upgrade-path">
   <h4>Caminho para Atualização</h4>
@@ -1049,7 +1053,7 @@
   <p>Execute a <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="noopener">ferramenta de migração</a> para encontrar casos de <code>deactivate</code>.</p>
 </div>
 
-<h3 id="canDeactivate-subsituido"><a href="#canDeactivate-subsituido" class="headerlink" title="canDeactivate subsituído"></a><code>canDeactivate</code> <sup>subsituído</sup></h3><p>Em seu lugar, use <a href="https://router.vuejs.org/en/advanced/navigation-guards.html#incomponent-guards" target="_blank" rel="noopener"><code>beforeRouteLeave</code></a> no componente.</p>
+<h3 id="canDeactivate-substituido"><a href="#canDeactivate-substituido" class="headerlink" title="canDeactivate substituído"></a><code>canDeactivate</code> <sup>substituído</sup></h3><p>Em seu lugar, use <a href="https://router.vuejs.org/en/advanced/navigation-guards.html#incomponent-guards" target="_blank" rel="noopener"><code>beforeRouteLeave</code></a> no componente.</p>
 
 <div class="upgrade-path">
   <h4>Caminho para Atualização</h4>
@@ -1063,7 +1067,7 @@
   <p>Execute a <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="noopener">ferramenta de migração</a> para encontrar casos de <code>canReuse: false</code>.</p>
 </div>
 
-<h3 id="data-subsituido"><a href="#data-subsituido" class="headerlink" title="data subsituído"></a><code>data</code> <sup>subsituído</sup></h3><p>A propriedade <code>$route</code> agora é reativa, desta forma utilize um observador para reagir a mudanças de rota, como neste exemplo:</p>
+<h3 id="data-substituido"><a href="#data-substituido" class="headerlink" title="data substituído"></a><code>data</code> <sup>substituído</sup></h3><p>A propriedade <code>$route</code> agora é reativa, desta forma utilize um observador para reagir a mudanças de rota, como neste exemplo:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">  <span class="string">'$route'</span>: <span class="string">'fetchData'</span></span><br><span class="line">&#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">  fetchData: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <div class="upgrade-path">
@@ -1081,6 +1085,7 @@
 
 
   
+  
     <div class="guide-links">
       
         <span>← <a href="/v2/guide/migration.html">Migração do Vue 1.x</a></span>
@@ -1091,7 +1096,7 @@
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){

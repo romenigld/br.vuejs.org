@@ -144,11 +144,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -238,11 +238,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -276,6 +276,9 @@
         </a>
         <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
           <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
         </a>
         </div>
       </div>
@@ -851,7 +854,8 @@
   
     <h1>Funções de Renderização & JSX</h1>
   
-  <h2 id="Introducao"><a href="#Introducao" class="headerlink" title="Introdução"></a>Introdução</h2><p>Vue recomenda que <em>templates</em> sejam utilizados para construir seu HTML na grande maioria dos casos. Haverá situações, no entanto, em que você irá realmente precisar de todo o poder de programação do JavaScript. É quando você pode usar a <strong>função <code>render</code></strong>, uma alternativa aos <em>templates</em> mais próxima do compilador.</p>
+  
+    <h2 id="Introducao"><a href="#Introducao" class="headerlink" title="Introdução"></a>Introdução</h2><p>Vue recomenda que <em>templates</em> sejam utilizados para construir seu HTML na grande maioria dos casos. Haverá situações, no entanto, em que você irá realmente precisar de todo o poder de programação do JavaScript. É quando você pode usar a <strong>função <code>render</code></strong>, uma alternativa aos <em>templates</em> mais próxima do compilador.</p>
 <p>Vamos mergulhar em um exemplo simples onde a função <code>render</code> seria prática. Digamos que você quer gerar cabeçalhos (<em>headings</em>) com âncoras:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"hello-world"</span> <span class="attr">href</span>=<span class="string">"#hello-world"</span>&gt;</span></span><br><span class="line">    Olá Mundo!</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Para o código HTML acima, você decide que quer esta interface para o componente:</p>
@@ -865,11 +869,11 @@
 <p>Muito mais simples! Mais ou menos. O código é menor, mas requer maior familiaridade com as propriedades de uma instância Vue. Neste caso, você precisa saber que quando você inclui elementos filho em seu componente, sem especificar um atributo <code>slot</code>, como o <code>Olá Mundo!</code> dentro de <code>anchored-heading</code>, esses elementos estão acessíveis na instância através de <code>$slots.default</code>. Se você ainda não leu, <strong>é altamente recomendado que leia a seção da API de <a href="../api/#Propriedades-de-Instancia">propriedades da instância</a> antes de se aprofundar em funções <code>render</code></strong>.</p>
 <h2 id="Nos-Arvores-e-DOM-Virtual"><a href="#Nos-Arvores-e-DOM-Virtual" class="headerlink" title="Nós, Árvores e DOM Virtual"></a>Nós, Árvores e DOM Virtual</h2><p>Antes de nos aprofundarmos nas funções de renderização, é importante saber um pouco sobre como os navegadores trabalham. Considere este HTML como exemplo:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>My title<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  Some text content</span><br><span class="line">  <span class="comment">&lt;!-- <span class="doctag">TODO:</span> Add tagline --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Quando um navegador lê esse código, ele compila uma <a href="https://javascript.info/dom-nodes" target="_blank" rel="noopener">árvore de “nós DOM”</a> para ajudar a manter o controle sobre todas as coisas, assim como você poderia querer construir uma árvore genealógica para manter o controle sobre a estensão de sua família.</p>
+<p>Quando um navegador lê esse código, ele compila uma <a href="https://javascript.info/dom-nodes" target="_blank" rel="noopener">árvore de “nós DOM”</a> para ajudar a manter o controle sobre todas as coisas, assim como você poderia querer construir uma árvore genealógica para manter o controle sobre a extensão de sua família.</p>
 <p>A árvore de nós DOM para o HTML acima aparentaria isso:</p>
 <p><img src="/images/dom-tree.png" alt="Visualização da Árvore DOM"></p>
 <p>Cada elemento é um nó. Cada pedaço de texto é um nó. Até mesmo comentários são nós! Um nó é apenas um pedaço da página. E assim como na árvore genealógica, cada nó tem filhos (ou seja, cada pedaço pode conter outros pedaços dentro).</p>
-<p>Atualizar todos esses nós eficientemente pode ser difícil, mas por sorte você nunca precisará fazer isso manualmente. Ao invés disso, você diz ao Vue qual HTML quer na página, através de um <em>template</em>:</p>
+<p>Atualizar todos esses nós eficientemente pode ser difícil, mas por sorte você nunca precisará fazer isso manualmente. Em vez disso, você diz ao Vue qual HTML quer na página, através de um <em>template</em>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; blogTitle &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Ou uma função de renderização:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'h1'</span>, <span class="keyword">this</span>.blogTitle)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -894,7 +898,7 @@
 <h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a><code>v-model</code></h3><p>Não existe contrapartida direta de <code>v-model</code> em funções de renderização - você terá que implementar a lógica por si próprio:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> self = <span class="keyword">this</span></span><br><span class="line">  <span class="keyword">return</span> createElement(<span class="string">'input'</span>, &#123;</span><br><span class="line">    domProps: &#123;</span><br><span class="line">      value: self.value</span><br><span class="line">    &#125;,</span><br><span class="line">    on: &#123;</span><br><span class="line">      input: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">        self.value = event.target.value</span><br><span class="line">        self.$emit(<span class="string">'input'</span>, event.target.value)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Este é o custo de ir para um nível mais baixo, mas também oferece muito mais controle sobre os detalhes da interação em comparação ao <code>v-model</code>.</p>
-<h3 id="Eventos-e-Modificadores"><a href="#Eventos-e-Modificadores" class="headerlink" title="Eventos e Modificadores"></a>Eventos e Modificadores</h3><p>Para modificadores de eventos <code>.passive</code>, <code>.capture</code> e <code>.once</code>, Vue oferece prefixos que podem ser usandos em conjunto com <code>on</code>:</p>
+<h3 id="Eventos-e-Modificadores"><a href="#Eventos-e-Modificadores" class="headerlink" title="Eventos e Modificadores"></a>Eventos e Modificadores</h3><p>Para modificadores de eventos <code>.passive</code>, <code>.capture</code> e <code>.once</code>, Vue oferece prefixos que podem ser usados em conjunto com <code>on</code>:</p>
 <table>
 <thead>
 <tr>
@@ -1038,7 +1042,7 @@ new Vue({
   computed: {
     result: function () {
       if (!this.templateText) {
-        return 'Infome um template válido acima'
+        return 'Informe um template válido acima'
       }
       try {
         var result = Vue.compile(this.templateText.replace(/\s{2,}/g, ''))
@@ -1082,6 +1086,7 @@ console.error = function (error) {
 
 
   
+  
     <div class="guide-links">
       
         <span>← <a href="/v2/guide/custom-directive.html">Diretivas Personalizadas</a></span>
@@ -1092,7 +1097,7 @@ console.error = function (error) {
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){

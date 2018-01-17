@@ -144,11 +144,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -238,11 +238,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -276,6 +276,9 @@
         </a>
         <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
           <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
         </a>
         </div>
       </div>
@@ -851,7 +854,8 @@
   
     <h1>Publicando em Produção</h1>
   
-  <h2 id="Habilitando-o-Modo-de-Producao"><a href="#Habilitando-o-Modo-de-Producao" class="headerlink" title="Habilitando o Modo de Produção"></a>Habilitando o Modo de Produção</h2><p>Em desenvolvimento, Vue proporciona uma grande quantidade de avisos para lhe ajudar a escapar das enrascadas mais comuns. Entretanto, estas Strings de aviso se tornam desnecessárias em produção e sobrecarregam o tamanho de sua aplicação. Além disso, algumas checagens têm um pequeno custo de desempenho durante a execução que pode ser evitado ao habilitar o modo de produção.</p>
+  
+    <h2 id="Habilitando-o-Modo-de-Producao"><a href="#Habilitando-o-Modo-de-Producao" class="headerlink" title="Habilitando o Modo de Produção"></a>Habilitando o Modo de Produção</h2><p>Em desenvolvimento, Vue proporciona uma grande quantidade de avisos para lhe ajudar a escapar das enrascadas mais comuns. Entretanto, estas Strings de aviso se tornam desnecessárias em produção e sobrecarregam o tamanho de sua aplicação. Além disso, algumas checagens têm um pequeno custo de desempenho durante a execução que pode ser evitado ao habilitar o modo de produção.</p>
 <h3 id="Sem-Empacotadores"><a href="#Sem-Empacotadores" class="headerlink" title="Sem Empacotadores"></a>Sem Empacotadores</h3><p>Se você está utilizando a compilação completa, ou seja, incluindo diretamente o Vue através de uma <em>tag</em> <code>&lt;script&gt;</code> sem uma ferramenta de <em>build</em>, tenha certeza que utilizará a versão minificada (<code>vue.min.js</code>) para produção. Ambas as versões podem ser encontradas no <a href="installation.html#Inclusao-Direta-com-lt-script-gt">guia de Instalação</a>.</p>
 <h3 id="Com-Empacotadores"><a href="#Com-Empacotadores" class="headerlink" title="Com Empacotadores"></a>Com Empacotadores</h3><p>Utilizando uma ferramenta de <em>build</em> como Webpack ou Browserify, o modo de produção será determinado pelo valor da variável <code>process.env.NODE_ENV</code> internamente no código-fonte do Vue, sendo o modo de desenvolvimento seu valor padrão. Ambos os empacotadores oferecem maneiras de sobrescrever esta variável para habilitar o modo de produção, sendo que as mensagens de aviso serão removidas pelos minificadores durante o empacotamento. Todos os modelos de projeto <code>vue-cli</code> já vêm com isto pré-configurado para você, mas pode ser interessante saber como funciona:</p>
 <h4 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h4><p>Utilize o <a href="https://webpack.js.org/plugins/define-plugin/" target="_blank" rel="noopener">DefinePlugin</a> do Webpack para indicar o ambiente de produção, de forma que blocos de aviso possam ser imediatamente removidos pelo UglifyJS durante a minificação. Exemplo:</p>
@@ -874,7 +878,7 @@
 <h4 id="Rollup"><a href="#Rollup" class="headerlink" title="Rollup"></a>Rollup</h4><p>O procedimento é parecido com o do Webpack. Configure utilizando o <a href="https://github.com/rollup/rollup-plugin-replace" target="_blank" rel="noopener">rollup-plugin-replace</a>:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> replace = <span class="built_in">require</span>(<span class="string">'rollup-plugin-replace'</span>)</span><br><span class="line"></span><br><span class="line">rollup(&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  plugins: [</span><br><span class="line">    replace(&#123;</span><br><span class="line">      <span class="string">'process.env.NODE_ENV'</span>: <span class="string">'"production"'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;).then(...)</span><br></pre></td></tr></table></figure>
 <h2 id="Pre-Compilando-Templates"><a href="#Pre-Compilando-Templates" class="headerlink" title="Pré-Compilando Templates"></a>Pré-Compilando Templates</h2><p>Quando estiver usando <em>templates</em> <strong>in-DOM</strong> ou <em>template strings</em> <strong>in-JavaScript</strong>, a transformação para funções <code>render</code> ocorre em tempo real. Isto é geralmente rápido o bastante na maioria dos casos, mas é melhor evitar se a aplicação for muito sensível a variações de desempenho.</p>
-<p>A forma mais simples de pré-compilar <em>templates</em> é utilizar <a href="single-file-components.html">Componentes Single-File</a> - os processos de <em>build</em> associados automaticamente realizam a pré-compilação para você, desta forma o código final já contém as funções <code>render</code> ao invés de <em>template strings</em> puras.</p>
+<p>A forma mais simples de pré-compilar <em>templates</em> é utilizar <a href="single-file-components.html">Componentes Single-File</a> - os processos de <em>build</em> associados automaticamente realizam a pré-compilação para você, desta forma o código final já contém as funções <code>render</code> em vez de <em>template strings</em> puras.</p>
 <p>Se você estiver utilizando Webpack e preferir separar seu JavaScript dos arquivos de <em>template</em>, você pode utilizar <a href="https://github.com/ktsn/vue-template-loader" target="_blank" rel="noopener">vue-template-loader</a>, o qual transforma os arquivos de <em>template</em> independentes em funções <code>render</code> durante o processo de <em>build</em>.</p>
 <h2 id="Extraindo-CSS-de-Componentes"><a href="#Extraindo-CSS-de-Componentes" class="headerlink" title="Extraindo CSS de Componentes"></a>Extraindo CSS de Componentes</h2><p>Quando estiver usando Componentes Single-File, o CSS dentro deles é dinamicamente injetado na forma de <em> tags</em> <code>&lt;style&gt;</code> pelo JavaScript. Isto tem um pequeno custo durante a execução, e se você estiver utilizando <em>server-side rendering</em>, ocorrerá um efeito de “<em>flash</em> de conteúdo não estilizado”. Extrair o CSS de todos os componentes no mesmo arquivo pode evitar estes problemas, além de resultar em uma melhor minificação do CSS e melhor cache.</p>
 <p>Acesse a documentação da respectiva ferramenta de <em>build</em> para ver como é feito:</p>
@@ -886,6 +890,7 @@
 <h2 id="Rastreando-Erros-de-Renderizacao"><a href="#Rastreando-Erros-de-Renderizacao" class="headerlink" title="Rastreando Erros de Renderização"></a>Rastreando Erros de Renderização</h2><p>Se um erro ocorrer durante a execução da renderização de um componente, este será passado para a função global <code>Vue.config.errorHandler</code>, se ela estiver definida. Pode ser uma boa deixar este gancho definido juntamente com um serviço de rastreio de erros como o <a href="https://sentry.io" target="_blank" rel="noopener">Sentry</a>, o qual possui <a href="https://sentry.io/for/vue/" target="_blank" rel="noopener">uma integração oficial</a> para o Vue.</p>
 
   
+  
     <div class="guide-links">
       
       
@@ -894,7 +899,7 @@
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){

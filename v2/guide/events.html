@@ -144,11 +144,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -238,11 +238,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -276,6 +276,9 @@
         </a>
         <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
           <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
         </a>
         </div>
       </div>
@@ -851,7 +854,8 @@
   
     <h1>Manipulação de Eventos</h1>
   
-  <h2 id="Escutando-Eventos"><a href="#Escutando-Eventos" class="headerlink" title="Escutando Eventos"></a>Escutando Eventos</h2><p>Você pode usar a diretiva <code>v-on</code> para escutar eventos do DOM e rodar algum JavaScript quando tal evento for disparado.</p>
+  
+    <h2 id="Escutando-Eventos"><a href="#Escutando-Eventos" class="headerlink" title="Escutando Eventos"></a>Escutando Eventos</h2><p>Você pode usar a diretiva <code>v-on</code> para escutar eventos do DOM e rodar algum JavaScript quando tal evento for disparado.</p>
 <p>Por exemplo:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example-1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"counter += 1"</span>&gt;</span>Adiciona 1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Quantas vezes o botão acima foi clicado: &#123;&#123; counter &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> example1 = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example-1'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    counter: <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -896,7 +900,7 @@ var example2 = new Vue({
 })
 </script>
 
-<h2 id="Chamada-Direta-de-Metodos"><a href="#Chamada-Direta-de-Metodos" class="headerlink" title="Chamada Direta de Métodos"></a>Chamada Direta de Métodos</h2><p>Ao invés de fazer uma ligação apenas ao nome de um método, também podemos chamar métodos com uma instrução JavaScript diretamente no <code>v-on</code>:</p>
+<h2 id="Chamada-Direta-de-Metodos"><a href="#Chamada-Direta-de-Metodos" class="headerlink" title="Chamada Direta de Métodos"></a>Chamada Direta de Métodos</h2><p>Em vez de fazer uma ligação apenas ao nome de um método, também podemos chamar métodos com uma instrução JavaScript diretamente no <code>v-on</code>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example-3"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"say('oi')"</span>&gt;</span>Diga oi<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"say('tchau')"</span>&gt;</span>Diga tchau<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example-3'</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    say: <span class="function"><span class="keyword">function</span> (<span class="params">message</span>) </span>&#123;</span><br><span class="line">      alert(message)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>Resultado:<br>
@@ -918,7 +922,7 @@ new Vue({
 <p>Às vezes, também precisamos acessar o evento original do DOM em um manipulador. Você pode passá-lo a um método usando a variável especial <code>$event</code>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"warn('Form cannot be submitted yet.', $event)"</span>&gt;</span></span><br><span class="line">  Enviar</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">methods: &#123;</span><br><span class="line">  warn: <span class="function"><span class="keyword">function</span> (<span class="params">message, event</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// agora temos acesso ao evento nativo</span></span><br><span class="line">    <span class="keyword">if</span> (event) event.preventDefault()</span><br><span class="line">    alert(message)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Modificadores-de-Evento"><a href="#Modificadores-de-Evento" class="headerlink" title="Modificadores de Evento"></a>Modificadores de Evento</h2><p>É muito comum precisar chamar <code>event.preventDefault()</code> ou <code>event.stopPropagation()</code> em manipuladores de eventos. Embora possamos fazer isto facilmente dentro de métodos, seria melhor se os métodos pudessem lidar apenas com a lógica dos dados, ao invés de ter que lidar com detalhes de eventos DOM.</p>
+<h2 id="Modificadores-de-Evento"><a href="#Modificadores-de-Evento" class="headerlink" title="Modificadores de Evento"></a>Modificadores de Evento</h2><p>É muito comum precisar chamar <code>event.preventDefault()</code> ou <code>event.stopPropagation()</code> em manipuladores de eventos. Embora possamos fazer isto facilmente dentro de métodos, seria melhor se os métodos pudessem lidar apenas com a lógica dos dados, em vez de ter que lidar com detalhes de eventos DOM.</p>
 <p>Para resolver esse problema, o Vue fornece <strong>modificadores de evento</strong> para <code>v-on</code>. É só se lembrar que modificadores são sufixos da diretiva, indicados após um ponto.</p>
 <ul>
 <li><code>.stop</code></li>
@@ -927,8 +931,8 @@ new Vue({
 <li><code>.self</code></li>
 <li><code>.once</code></li>
 </ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- a propagação do evento click será interrompida --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- o evento submit deixará de recarregar a página --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>=<span class="string">"onSubmit"</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- modificadores podem ser encadeados --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop.prevent</span>=<span class="string">"doThat"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- é possível utilizar apenas o modificador --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- usar modo de captura ao adicionar o evento --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- ou seja, um evento em um elemento interno é tratato aqui após ser tratado por aquele elemento --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click.capture</span>=<span class="string">"doThis"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- só aciona o manipulador se event.target é o próprio elemento --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- isto é, não aciona a partir de um elemento filho --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click.self</span>=<span class="string">"doThat"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p class="tip">A ordem importa quando utilizar modificadores, pois o código é gerado na mesma ordem. Desta forma, <code>@click.prevent.self</code> irá previnir <strong>todos os cliques</strong>, enquanto <code>@click.self.prevent</code> irá previnir apenas cliques no próprio elemento.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- a propagação do evento click será interrompida --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- o evento submit deixará de recarregar a página --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>=<span class="string">"onSubmit"</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- modificadores podem ser encadeados --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop.prevent</span>=<span class="string">"doThat"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- é possível utilizar apenas o modificador --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- usar modo de captura ao adicionar o evento --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- ou seja, um evento em um elemento interno é tratado aqui após ser tratado por aquele elemento --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click.capture</span>=<span class="string">"doThis"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- só aciona o manipulador se event.target é o próprio elemento --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- isto é, não aciona a partir de um elemento filho --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click.self</span>=<span class="string">"doThat"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p class="tip">A ordem importa quando utilizar modificadores, pois o código é gerado na mesma ordem. Desta forma, <code>@click.prevent.self</code> irá prevenir <strong>todos os cliques</strong>, enquanto <code>@click.self.prevent</code> irá prevenir apenas cliques no próprio elemento.</p>
 
 <blockquote>
 <p>Novo em 2.1.4+</p>
@@ -938,9 +942,10 @@ new Vue({
 <blockquote>
 <p>Novo em 2.3.0+</p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- o evento scroll não cancelará o comportamento padrão da rolagem --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:scroll.passive</span>=<span class="string">"onScroll"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Em adição a estes modificadores, Vue oferece o modificador <code>.passive</code> para melhorar o desempenho, especialmente em dispositivos móveis. Por exemplo, ao utilizar a rolagem, o navegador irá rolar após o processo ser completado, pois não sabe se o manipulador do evento pretende chamar <code>event.preventDefault()</code>. O modificador <code>.passive</code> pode ser usado para avisar ao navegador que este evento não irá cancelar o comportamento padrão.</p>
-<p class="tip">Não utilize <code>.passive</code> e <code>.prevent</code> juntos. Um manipulador passivo não pode previnir o evento padrão.</p>
+<p>Vue also offers the <code>.passive</code> modifier, corresponding to <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters" target="_blank" rel="noopener"><code>addEventListener</code>‘s <code>passive</code> option</a>.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- o comportamento padrão do evento scroll (rolar) acontecerá --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- imediatamente, ao invés de aguardar `onScroll` completar   --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- para descobrir se ele chama `event.preventDefault()`       --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:scroll.passive</span>=<span class="string">"onScroll"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>O modificador <code>.passive</code> é especialmente útil para otimizar desempenho em dispositivos móveis.</p>
+<p class="tip">Não use <code>.passive</code> e <code>.prevent</code> juntos, pois <code>.prevent</code> será ignorado e seu navegador provavelmente exibirá um aviso. Lembre-se, <code>.passive</code> comunica ao navegador que você <em>não</em> quer previnir o comportamento padrão do evento.</p>
 
 <h2 id="Modificadores-de-Teclado"><a href="#Modificadores-de-Teclado" class="headerlink" title="Modificadores de Teclado"></a>Modificadores de Teclado</h2><p>Quando escutamos eventos do teclado, precisamos muitas vezes verificar a ocorrência de códigos de teclas comuns. O Vue também permite a adição de modificadores <code>v-on</code> ao escutar eventos de teclado:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- só chama `vm.submit()` quando o `keyCode` é 13 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-on:keyup.13</span>=<span class="string">"submit"</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -998,7 +1003,7 @@ new Vue({
 <li><code>.right</code></li>
 <li><code>.middle</code></li>
 </ul>
-<p>Estes modificadores restrigem o manipulador a eventos disparados por um botão específico do <em>mouse</em>, respectivamente o botão da esqueda, o da direita e o central (quando existente).</p>
+<p>Estes modificadores restringem o manipulador a eventos disparados por um botão específico do <em>mouse</em>, respectivamente o botão da esquerda, o da direita e o central (quando existente).</p>
 <h2 id="Por-Que-Escutas-no-HTML"><a href="#Por-Que-Escutas-no-HTML" class="headerlink" title="Por Que Escutas no HTML?"></a>Por Que Escutas no HTML?</h2><p>Você pode estar pensando que esta abordagem de escutas de evento viola as boas e velhas práticas sobre “separação de responsabilidades”. Fique tranquilo - como todas as funções de manipuladores e expressões Vue são estritamente ligadas ao <em>ViewModel</em> que está manipulando o modo de exibição atual, essa abordagem não causará qualquer dificuldade de manutenção. Na verdade, há vários benefícios em usar <code>v-on</code> no <em>template</em>:</p>
 <ol>
 <li><p>É mais fácil localizar as implementações de função de manipulador dentro de seu código JS deslizando sobre o <em>template</em> HTML.</p>
@@ -1010,6 +1015,7 @@ new Vue({
 </ol>
 
   
+  
     <div class="guide-links">
       
         <span>← <a href="/v2/guide/list.html">Renderização de Listas</a></span>
@@ -1020,7 +1026,7 @@ new Vue({
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){

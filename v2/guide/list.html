@@ -144,11 +144,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -238,11 +238,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -276,6 +276,9 @@
         </a>
         <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
           <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
         </a>
         </div>
       </div>
@@ -851,7 +854,8 @@
   
     <h1>Renderização de Listas</h1>
   
-  <h2 id="Array-em-Elementos-com-v-for"><a href="#Array-em-Elementos-com-v-for" class="headerlink" title="Array em Elementos com v-for"></a>Array em Elementos com <code>v-for</code></h2><p>Podemos utilizar a diretiva <code>v-for</code> para renderizar uma lista de elementos com base nos dados de um Array. A diretiva requer uma sintaxe especial na forma de <code>item in items</code>, onde <code>items</code> é a fonte de dados e <code>item</code> é um <strong>apelido</strong> para o elemento que estiver sendo iterado:</p>
+  
+    <h2 id="Array-em-Elementos-com-v-for"><a href="#Array-em-Elementos-com-v-for" class="headerlink" title="Array em Elementos com v-for"></a>Array em Elementos com <code>v-for</code></h2><p>Podemos utilizar a diretiva <code>v-for</code> para renderizar uma lista de elementos com base nos dados de um Array. A diretiva requer uma sintaxe especial na forma de <code>item in items</code>, onde <code>items</code> é a fonte de dados e <code>item</code> é um <strong>apelido</strong> para o elemento que estiver sendo iterado:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"example-1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span>&gt;</span></span><br><span class="line">    &#123;&#123; item.message &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> example1 = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example-1'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    items: [</span><br><span class="line">      &#123; <span class="attr">message</span>: <span class="string">'Algo'</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">message</span>: <span class="string">'Outro'</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>Resultado:</p>
@@ -906,7 +910,7 @@ var example2 = new Vue({
 })
 </script>
 
-<p>Também é possível utilizar <code>of</code> como delimitador, ao invés de <code>in</code>, de forma que fique mais próximo da sintaxe de iteradores do JavaScript:</p>
+<p>Também é possível utilizar <code>of</code> como delimitador, em vez de <code>in</code>, de forma que fique mais próximo da sintaxe de iteradores do JavaScript:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"item of items"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="Objetos-em-v-for"><a href="#Objetos-em-v-for" class="headerlink" title="Objetos em v-for"></a>Objetos em <code>v-for</code></h2><p>Você pode utilizar <code>v-for</code> para iterar através das propriedades de um objeto.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"v-for-object"</span> <span class="attr">class</span>=<span class="string">"demo"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"value in object"</span>&gt;</span></span><br><span class="line">    &#123;&#123; value &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -975,7 +979,7 @@ new Vue({
 
 <p class="tip">Quando estiver iterando sobre um objeto, a ordem das chaves é baseada na enumeração oferecida por <code>Object.keys()</code>, a qual <strong>não</strong> é garantidamente consistente entre implementações distintas de motores JavaScript.</p>
 
-<h2 id="key"><a href="#key" class="headerlink" title="key"></a><code>key</code></h2><p>Quando Vue está atualizando uma lista de elementos renderizados com <code>v-for</code>, por padrão se utiliza de uma estratégia de “remendo local”. Se a ordem dos itens de dados tiver mudado, ao invés de mover os elementos DOM para combinar com a nova ordem, Vue remendará o conteúdo de cada elemento em seu local atual, garantindo que o resultado reflita o que precisa ser renderizado em cada índice em particular. Isto é similar ao comportamento oferecido por <code>track-by=&quot;$index&quot;</code> no Vue 1.x.</p>
+<h2 id="key"><a href="#key" class="headerlink" title="key"></a><code>key</code></h2><p>Quando Vue está atualizando uma lista de elementos renderizados com <code>v-for</code>, por padrão se utiliza de uma estratégia de “remendo local”. Se a ordem dos itens de dados tiver mudado, em vez de mover os elementos DOM para combinar com a nova ordem, Vue remendará o conteúdo de cada elemento em seu local atual, garantindo que o resultado reflita o que precisa ser renderizado em cada índice em particular. Isto é similar ao comportamento oferecido por <code>track-by=&quot;$index&quot;</code> no Vue 1.x.</p>
 <p>Este modo padrão é eficiente, mas adequado apenas <strong>quando seu resultado de renderização não se apoiar em estado de componentes filhos ou estado de DOM temporário (como valores de campos de formulário)</strong>.</p>
 <p>Vue precisa de uma dica para que possa rastrear a identidade de cada nó e assim reutilizar e reordenar elementos existentes. Para tanto, defina um atributo <code>key</code> único para cada item. Um valor ideal para <code>key</code> poderia ser um <em>id</em> exclusivo de cada item. Ele é um equivalente a grosso modo do <code>track-by</code> do 1.x, mas funciona como atributo, portanto deve-se utilizar <code>v-bind</code> para vinculá-lo a valores dinâmicos (neste exemplo, usando a sintaxe abreviada):</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span> <span class="attr">:key</span>=<span class="string">"item.id"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- conteúdo --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1013,11 +1017,11 @@ new Vue({
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.set(vm.userProfile, <span class="string">'age'</span>, <span class="number">30</span>)</span><br></pre></td></tr></table></figure>
 <p>Também é possível usar o método de instância <code>vm.$set</code>, um atalho para o global <code>Vue.set</code>:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">vm.$set(<span class="keyword">this</span>.userProfile, <span class="string">'age'</span>, <span class="number">27</span>)</span><br></pre></td></tr></table></figure>
-<p>Às vezes, você pode querer adicionar várias novas propriedades a um objeto existente, utilizando por exemplo <code>Object.assign()</code> ou <code>_.extend()</code>. Nestes casos, você pode criar um objeto novo com propriedades mescladas de ambos os objetos. Então, ao invés de:</p>
+<p>Às vezes, você pode querer adicionar várias novas propriedades a um objeto existente, utilizando por exemplo <code>Object.assign()</code> ou <code>_.extend()</code>. Nestes casos, você pode criar um objeto novo com propriedades mescladas de ambos os objetos. Então, em vez de:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Object</span>.assign(<span class="keyword">this</span>.userProfile, &#123;</span><br><span class="line">  age: <span class="number">30</span>,</span><br><span class="line">  favoriteColor: <span class="string">'Verde Vue'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>Você poderia adicionar novas propriedades reativas com:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.userProfile = <span class="built_in">Object</span>.assign(&#123;&#125;, <span class="keyword">this</span>.userProfile, &#123;</span><br><span class="line">  age: <span class="number">30</span>,</span><br><span class="line">  favoriteColor: <span class="string">'Verde Vue'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="Mostrando-Resultados-Filtrados-Ordenados"><a href="#Mostrando-Resultados-Filtrados-Ordenados" class="headerlink" title="Mostrando Resultados Filtrados/Ordenados"></a>Mostrando Resultados Filtrados/Ordenados</h2><p>Às vezes, queremos exibir uma versão filtrada ou ordenada de um Array sem efetivamente mutar ou reiniciar seus dados originais. Neste caso, você pode criar um <a href="computed.html#Dados-Computados">dado computado</a> que retorna um Array filtrado ou ordenado.</p>
+<h2 id="Mostrando-Resultados-Filtrados-Ordenados"><a href="#Mostrando-Resultados-Filtrados-Ordenados" class="headerlink" title="Mostrando Resultados Filtrados/Ordenados"></a>Mostrando Resultados Filtrados/Ordenados</h2><p>Às vezes, queremos exibir uma versão filtrada ou ordenada de um Array sem efetivamente mudar ou reiniciar seus dados originais. Neste caso, você pode criar um <a href="computed.html#Dados-Computados">dado computado</a> que retorna um Array filtrado ou ordenado.</p>
 <p>Por exemplo:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"n in evenNumbers"</span>&gt;</span>&#123;&#123; n &#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  numbers: [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> ]</span><br><span class="line">&#125;,</span><br><span class="line">computed: &#123;</span><br><span class="line">  evenNumbers: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.numbers.filter(<span class="function"><span class="keyword">function</span> (<span class="params">number</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> number % <span class="number">2</span> === <span class="number">0</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1040,7 +1044,7 @@ new Vue({
 <h2 id="Utilizando-v-if-com-v-for"><a href="#Utilizando-v-if-com-v-for" class="headerlink" title="Utilizando v-if com v-for"></a>Utilizando <code>v-if</code> com <code>v-for</code></h2><p>Quando existentes em um mesmo nó, <code>v-for</code> tem maior prioridade que <code>v-if</code>. Isto significa que <code>v-if</code> será executado separadamente a cada iteração da repetição. Isto pode ser útil se quiser renderizar nós condicionalmente para apenas <em>alguns</em> itens, como abaixo:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"todo in todos"</span> <span class="attr">v-if</span>=<span class="string">"!todo.isComplete"</span>&gt;</span></span><br><span class="line">  &#123;&#123; todo &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Este exemplo renderizaria apenas as tarefas não marcadas como completas.</p>
-<p>Se, ao invés disso, sua intenção for condicionalmente pular toda a execução da repetição, você pode colocar o <code>v-if</code> em um elemento envolvendo o bloco (ou <a href="conditional.html#Grupos-Condicionais-com-lt-template-gt"><code>&lt;template&gt;</code></a>). Por exemplo:</p>
+<p>Se, em vez disso, sua intenção for condicionalmente pular toda a execução da repetição, você pode colocar o <code>v-if</code> em um elemento envolvendo o bloco (ou <a href="conditional.html#Grupos-Condicionais-com-lt-template-gt"><code>&lt;template&gt;</code></a>). Por exemplo:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">v-if</span>=<span class="string">"todos.length"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"todo in todos"</span>&gt;</span></span><br><span class="line">    &#123;&#123; todo &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>Não há tarefas a fazer!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="Componentes-com-v-for"><a href="#Componentes-com-v-for" class="headerlink" title="Componentes com v-for"></a>Componentes com <code>v-for</code></h2><blockquote>
 <p>Caso ainda não tenha lido sobre <a href="components.html">Componentes</a>, sinta-se livre para pular e voltar depois.</p>
@@ -1110,6 +1114,7 @@ new Vue({
 
 
   
+  
     <div class="guide-links">
       
         <span>← <a href="/v2/guide/conditional.html">Renderização Condicional</a></span>
@@ -1120,7 +1125,7 @@ new Vue({
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){

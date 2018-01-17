@@ -144,11 +144,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -238,11 +238,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -276,6 +276,9 @@
         </a>
         <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
           <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
         </a>
         </div>
       </div>
@@ -851,12 +854,13 @@
   
     <h1>Migração do Vuex 0.6.x para 1.0</h1>
   
-  <blockquote>
+  
+    <blockquote>
 <p>Vuex 2.0 foi lançado, mas este guia só cobre a migração para a versão 1.0? É um mero erro de digitação? Aliás, parece que Vuex 1.0 e 2.0 foram lançados simultaneamente! O que está acontecendo? Qual dos dois devo usar e qual deles é compatível com Vue 2.0?</p>
 </blockquote>
 <p>Tanto Vuex 1.0 quanto 2.0:</p>
 <ul>
-<li>suportanto totalmente tanto Vue 1.0 quanto 2.0</li>
+<li>suportando totalmente tanto Vue 1.0 quanto 2.0</li>
 <li>serão mantidos por um futuro próximo</li>
 </ul>
 <p>Entretanto, eles tem públicos-alvo significativamente diferentes:</p>
@@ -873,8 +877,8 @@
   <p>Execute a <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="noopener">ferramenta de migração</a> para encontrar casos de <code>store.watch</code> com Strings em seu primeiro parâmetro.</p>
 </div>
 
-<h2 id="Emicao-de-Eventos-no-Store-removido"><a href="#Emicao-de-Eventos-no-Store-removido" class="headerlink" title="Emição de Eventos no Store removido"></a>Emição de Eventos no Store <sup>removido</sup></h2><p>A instância do <em>store</em> não expõe mais a interface de emição de eventos (<code>on</code>, <code>off</code>, <code>emit</code>). Se você esteve usando o <em>store</em> como um <em>global event bus</em>, <a href="migration.html#dispatch-and-broadcast-obsoleto">veja esta seção</a> para instruções de migração.</p>
-<p>Ao invés de usar esta interface para observar eventos emitidos pelo próprio <em>store</em> (por exemplo, <code>store.on(&#39;mutation&#39;, callback)</code>), um novo método <code>store.subscribe</code> foi introduzido. O cenário de uso típico dentro de um <em>plugin</em> seria:</p>
+<h2 id="Emissao-de-Eventos-no-Store-removido"><a href="#Emissao-de-Eventos-no-Store-removido" class="headerlink" title="Emissão de Eventos no Store removido"></a>Emissão de Eventos no Store <sup>removido</sup></h2><p>A instância do <em>store</em> não expõe mais a interface de emissão de eventos (<code>on</code>, <code>off</code>, <code>emit</code>). Se você esteve usando o <em>store</em> como um <em>global event bus</em>, <a href="migration.html#dispatch-and-broadcast-obsoleto">veja esta seção</a> para instruções de migração.</p>
+<p>Em vez de usar esta interface para observar eventos emitidos pelo próprio <em>store</em> (por exemplo, <code>store.on(&#39;mutation&#39;, callback)</code>), um novo método <code>store.subscribe</code> foi introduzido. O cenário de uso típico dentro de um <em>plugin</em> seria:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> myPlugin = <span class="function"><span class="params">store</span> =&gt;</span> &#123;</span><br><span class="line">  store.subscribe(<span class="function"><span class="keyword">function</span> (<span class="params">mutation, state</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Faça algo...</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Veja o exemplo na <a href="https://github.com/vuejs/vuex/blob/1.0/docs/en/plugins.md" target="_blank" rel="noopener">documentação de plugins</a> para mais informações.</p>
 
@@ -883,7 +887,7 @@
   <p>Execute a <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="noopener">ferramenta de migração</a> para encontrar casos de <code>store.on</code>, <code>store.off</code> e <code>store.emit</code>.</p>
 </div>
 
-<h2 id="Middlewares-substituido"><a href="#Middlewares-substituido" class="headerlink" title="Middlewares substituído"></a>Middlewares <sup>substituído</sup></h2><p>Middlewares foram substituídos por <em>plugins</em>. Um <em>plugin</em> é uma função que recebe o <em>store</em> como seu único argumento, podendo então se subscrever ao evento de mutação ocorrida nele:</p>
+<h2 id="Middlewares-substituidos"><a href="#Middlewares-substituidos" class="headerlink" title="Middlewares substituídos"></a>Middlewares <sup>substituídos</sup></h2><p>Middlewares foram substituídos por <em>plugins</em>. Um <em>plugin</em> é uma função que recebe o <em>store</em> como seu único argumento, podendo então se subscrever ao evento de mutação ocorrida nele:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> myPlugin = <span class="function"><span class="params">store</span> =&gt;</span> &#123;</span><br><span class="line">  store.subscribe(<span class="string">'mutation'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">mutation, state</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Faça algo...</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Para mais detalhes, veja a <a href="https://github.com/vuejs/vuex/blob/1.0/docs/en/plugins.md" target="_blank" rel="noopener">documentação de plugins</a>.</p>
 
@@ -894,6 +898,7 @@
 
 
   
+  
     <div class="guide-links">
       
         <span>← <a href="/v2/guide/migration-vue-router.html">Migração do Vue Router 0.7.x</a></span>
@@ -902,7 +907,7 @@
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){

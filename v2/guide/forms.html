@@ -144,11 +144,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -238,11 +238,11 @@
   <a href="/v2/guide/team.html" class="nav-link team">Equipe</a>
 </li>
 <li class="nav-dropdown-container support-vue">
-  <a class="nav-link">Patrocine</a><span class="arrow"></span>
+  <a href="/support-vuejs/" class="nav-link">Patrocine</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><ul>
       <li><a href="/support-vuejs/#Doacoes-Unicas" class="nav-link">Doações Únicas</a></li>
-      <li><a href="/support-vuejs/#Ajuda-Recorrente" target="_blank" class="nav-link">Ajuda Recorrente</a></li>
+      <li><a href="/support-vuejs/#Ajuda-Recorrente" class="nav-link">Ajuda Recorrente</a></li>
       <li><a href="https://vue.threadless.com" target="_blank" class="nav-link">Loja de Camisetas</a></li>
     </ul></li>
   </ul>
@@ -276,6 +276,9 @@
         </a>
         <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
           <img src="/images/vueschool.png">
+        </a>
+        <a href="https://www.datacamp.com/careers?utm_source=vuejs&utm_medium=sidebar" target="_blank" class="logo">
+          <img src="/images/datacamp.png">
         </a>
         </div>
       </div>
@@ -851,10 +854,11 @@
   
     <h1>Interligações em Formulários</h1>
   
-  <h2 id="Uso-Basico"><a href="#Uso-Basico" class="headerlink" title="Uso Básico"></a>Uso Básico</h2><p>Você pode usar a diretiva <code>v-model</code> para criar interligações de mão dupla (<em>two-way binding</em>) entre os dados e elementos como <em>input</em> e <em>textarea</em> de formulários. A diretiva automaticamente busca a maneira correta de atualizar o elemento com base no tipo de entrada. Embora um pouco mágico, <code>v-model</code> é essencialmente açúcar sintático para atualização de dados através de eventos de entrada do usuário, além de cuidados especiais para alguns casos extremos.</p>
+  
+    <h2 id="Uso-Basico"><a href="#Uso-Basico" class="headerlink" title="Uso Básico"></a>Uso Básico</h2><p>Você pode usar a diretiva <code>v-model</code> para criar interligações de mão dupla (<em>two-way binding</em>) entre os dados e elementos como <em>input</em> e <em>textarea</em> de formulários. A diretiva automaticamente busca a maneira correta de atualizar o elemento com base no tipo de entrada. Embora um pouco mágico, <code>v-model</code> é essencialmente açúcar sintático para atualização de dados através de eventos de entrada do usuário, além de cuidados especiais para alguns casos extremos.</p>
 <p class="tip">A diretiva <code>v-model</code> irá ignorar o estado inicial de <code>value</code>, <code>checked</code> ou <code>selected</code> encontrado em qualquer elemento de formulário. Sempre se tratará a instância Vue como a fonte dos dados verdadeiros. Ou seja, declare os valores iniciais no lado JavaScript, dentro da opção <code>data</code> de seu componente.</p>
 
-<p class="tip" id="vmodel-ime-tip">Para linguagens que requerem um <a href="https://en.wikipedia.org/wiki/Input_method" target="_blank" rel="noopener">IME</a> (Chinês, Japonês, Coreano etc.), você notará que <code>v-model</code> não é atualizado durante a atualização da composição IME. Se você quiser atender a estas atualizações, use o evento <code>input</code> ao invés do <code>v-model</code>.</p>
+<p class="tip" id="vmodel-ime-tip">Para linguagens que requerem um <a href="https://en.wikipedia.org/wiki/Input_method" target="_blank" rel="noopener">IME</a> (Chinês, Japonês, Coreano etc.), você notará que <code>v-model</code> não é atualizado durante a atualização da composição IME. Se você quiser atender a estas atualizações, use o evento <code>input</code> em vez do <code>v-model</code>.</p>
 
 <h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"message"</span> <span class="attr">placeholder</span>=<span class="string">"Me edite"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>A mensagem é: &#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -891,7 +895,7 @@ new Vue({
 
 <p class="tip">Interpolação em <i>textareas</i> (<code>&lt;textarea&gt;{{text}}&lt;/textarea&gt;</code>) não funciona. Em vez disso, sempre use <code>v-model</code>.</p>
 
-<h3 id="Checkbox"><a href="#Checkbox" class="headerlink" title="Checkbox"></a>Checkbox</h3><p><em>Checkbox</em> simples com valor boleano:</p>
+<h3 id="Checkbox"><a href="#Checkbox" class="headerlink" title="Checkbox"></a>Checkbox</h3><p><em>Checkbox</em> simples com valor booleano:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"checked"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"checkbox"</span>&gt;</span>&#123;&#123; checked &#125;&#125;<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <div id="example-2" class="demo">
@@ -1023,7 +1027,7 @@ new Vue({
 })
 </script>
 
-<h2 id="Vinculando-aos-Valores"><a href="#Vinculando-aos-Valores" class="headerlink" title="Vinculando aos Valores"></a>Vinculando aos Valores</h2><p>Para <em>radio</em>, <em>checkbox</em> e <em>options</em> de <em>select</em>, os valores de vinculação do <code>v-model</code> são normalmente Strings estáticas (ou boleano no caso do <em>checkbox</em>):</p>
+<h2 id="Vinculando-aos-Valores"><a href="#Vinculando-aos-Valores" class="headerlink" title="Vinculando aos Valores"></a>Vinculando aos Valores</h2><p>Para <em>radio</em>, <em>checkbox</em> e <em>options</em> de <em>select</em>, os valores de vinculação do <code>v-model</code> são normalmente Strings estáticas (ou booleano no caso do <em>checkbox</em>):</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- `picked` é uma string "a" quando assinalado --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">v-model</span>=<span class="string">"picked"</span> <span class="attr">value</span>=<span class="string">"a"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- `toggle` é verdadeiro ou falso --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"toggle"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- `selected` é uma string "abc" quando assinalado --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"abc"</span>&gt;</span>ABC<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Mas, às vezes, podemos querer vincular o valor de uma propriedade dinâmica disponível na instância Vue. Podemos usar <code>v-bind</code> para alcançar este objetivo. Além disso, usar <code>v-bind</code> nos permite vincular o valor de <em>inputs</em> para valores não-String.</p>
 <h3 id="Checkbox-1"><a href="#Checkbox-1" class="headerlink" title="Checkbox"></a>Checkbox</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">"checkbox"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"toggle"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">true-value</span>=<span class="string">"sim"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">false-value</span>=<span class="string">"não"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1047,6 +1051,7 @@ new Vue({
 <p>Os tipo de <em>input</em> nativos do HTML nem sempre atendem todas as necessidades. Por sorte, componentes Vue permitem construir <em>inputs</em> reutilizáveis com comportamento completamente personalizado. Estes componentes também funcionam com <code>v-model</code>! Para saber mais, leia sobre <a href="components.html#Componentes-de-Formularios-usando-Eventos-Personalizados">componentes de formulário personalizados</a> no guia de Componentes.</p>
 
   
+  
     <div class="guide-links">
       
         <span>← <a href="/v2/guide/events.html">Manipulação de Eventos</a></span>
@@ -1057,7 +1062,7 @@ new Vue({
     </div>
   
   <div class="footer">
-    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
   (function(){
