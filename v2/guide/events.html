@@ -942,9 +942,9 @@ new Vue({
 <blockquote>
 <p>Novo em 2.3.0+</p>
 </blockquote>
-<p>Vue also offers the <code>.passive</code> modifier, corresponding to <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters" target="_blank" rel="noopener"><code>addEventListener</code>‘s <code>passive</code> option</a>.</p>
+<p>Vue também oferece o modificador <code>.passive</code>, correspondendo à <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters" target="_blank" rel="noopener">opção <code>passive</code> do <code>addEventListener</code></a>.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- o comportamento padrão do evento scroll (rolar) acontecerá --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- imediatamente, ao invés de aguardar `onScroll` completar   --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- para descobrir se ele chama `event.preventDefault()`       --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:scroll.passive</span>=<span class="string">"onScroll"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>O modificador <code>.passive</code> é especialmente útil para otimizar desempenho em dispositivos móveis.</p>
+<p>O <code>.passive</code> é especialmente útil para otimizar desempenho em dispositivos móveis.</p>
 <p class="tip">Não use <code>.passive</code> e <code>.prevent</code> juntos, pois <code>.prevent</code> será ignorado e seu navegador provavelmente exibirá um aviso. Lembre-se, <code>.passive</code> comunica ao navegador que você <em>não</em> quer previnir o comportamento padrão do evento.</p>
 
 <h2 id="Modificadores-de-Teclado"><a href="#Modificadores-de-Teclado" class="headerlink" title="Modificadores de Teclado"></a>Modificadores de Teclado</h2><p>Quando escutamos eventos do teclado, precisamos muitas vezes verificar a ocorrência de códigos de teclas comuns. O Vue também permite a adição de modificadores <code>v-on</code> ao escutar eventos de teclado:</p>
